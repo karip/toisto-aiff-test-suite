@@ -1,0 +1,19 @@
+{
+    "testinfo": {
+        "description": "Sample rate 1",
+        "software": "Audio Toolbox API",
+        "platform": "macOS 12.4",
+        "command": "tools/audiotoolbox-writer 1 bei8 1 tests/aiff/aiff-samplerate-1.aiff"
+    },
+    "sampleRate": 1,
+    "channels": 1,
+    "codec": "pcm_bei",
+    "sampleSize": 8,
+    "samplesPerChannel": 8,
+    "startSamples": [
+        [ 10, 10, 10, 10, 10, 10, 10, 10 ]
+    ],
+    "endSamples": [
+        [ 10, 10, 10, 10, 10, 10, 10, 10 ]
+    ]
+}

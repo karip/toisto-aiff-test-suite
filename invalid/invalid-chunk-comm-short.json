@@ -1,0 +1,15 @@
+{
+    "testinfo": {
+        "description": "The COMM chunk too short without the compression type. QuickTime Player cannot play this file."
+    },
+    "format": "aiff-c",
+    "sampleRate": 44100,
+    "channels": 1,
+    "sampleSize": 8,
+    "startSamples": [
+        [  ]
+    ],
+    "endSamples": [
+        [  ]
+    ]
+}

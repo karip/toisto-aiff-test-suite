@@ -1,0 +1,17 @@
+{
+    "testinfo": {
+        "description": "The SSND chunk with one sample"
+    },
+    "format": "aiff",
+    "sampleRate": 44100,
+    "channels": 1,
+    "codec": "pcm_bei",
+    "sampleSize": 8,
+    "samplesPerChannel": 1,
+    "startSamples": [
+        [ 86 ]
+    ],
+    "endSamples": [
+        [ 86 ]
+    ]
+}

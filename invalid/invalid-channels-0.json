@@ -1,0 +1,17 @@
+{
+    "testinfo": {
+        "description": "Zero channels. QuickTime Player cannot play this file."
+    },
+    "format": "aiff",
+    "sampleRate": 44100,
+    "channels": 0,
+    "codec": "pcm_bei",
+    "sampleSize": 8,
+    "samplesPerChannel": 0,
+    "startSamples": [
+        [  ]
+    ],
+    "endSamples": [
+        [  ]
+    ]
+}

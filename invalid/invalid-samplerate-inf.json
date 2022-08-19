@@ -1,0 +1,18 @@
+{
+    "testinfo": {
+        "description": "Sample rate infinity. QuickTime Player cannot play this file."
+    },
+    "sampleRate": "inf",
+    "channels": 1,
+    "codec": "pcm_bei",
+    "sampleSize": 8,
+    "samplesPerChannel": 26,
+    "startSamples": [
+        [ 10, 10, 10, 10, 10, 10, 10, 10, -128, 127, -16, -88, 96, 24, -48, -120,
+          64, -8, -80, 104, 32, -40, -112, 72, 0, -72 ]
+    ],
+    "endSamples": [
+        [ 10, 10, 10, 10, 10, 10, 10, 10, -128, 127, -16, -88, 96, 24, -48, -120,
+          64, -8, -80, 104, 32, -40, -112, 72, 0, -72 ]
+    ]
+}

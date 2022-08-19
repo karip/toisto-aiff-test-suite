@@ -1,0 +1,5 @@
+{
+    "testinfo": {
+        "description": "AIFF file without the COMM chunk. QuickTime Player cannot play this file."
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "testinfo": {
+        "description": "Sample size zero bits. QuickTime Player cannot play this file."
+    },
+    "format": "aiff",
+    "sampleRate": 44100,
+    "channels": 1,
+    "codec": "pcm_bei",
+    "sampleSize": 0,
+    "samplesPerChannel": 0,
+    "startSamples": [
+        [  ]
+    ],
+    "endSamples": [
+        [  ]
+    ]
+}

@@ -1,0 +1,8 @@
+[package]
+name = "aiff-rs-tester"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aiff = { git = "https://github.com/julientregoat/aiff-rs" }
+#aiff = { git = "https://github.com/Ch0ronomato/aiff-rs.git", branch = "f32" }
