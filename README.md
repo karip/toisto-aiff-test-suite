@@ -136,7 +136,6 @@ for each channel. The range of values depends on the codec:
 ## References
 
  - [AIFF/AIFF-C Specifications](http://www-mmsp.ece.mcgill.ca/Documents/AudioFormats/AIFF/AIFF.html)
- - [Apple documentation about available codecs in Mac OS X 10.4](https://developer.apple.com/library/archive/documentation/MusicAudio/Conceptual/CoreAudioOverview/SupportedAudioFormatsMacOSX/SupportedAudioFormatsMacOSX.html#//apple_ref/doc/uid/TP40003577-CH7-SW1)
  - [Apple documentation about supported audio file formats in Mac OS X 10.5](https://developer.apple.com/library/archive/documentation/MusicAudio/Conceptual/CoreAudioOverview/SupportedAudioFormatsMacOSX/SupportedAudioFormatsMacOSX.html)
  - [wiki.multimedia.cx: ima4](https://wiki.multimedia.cx/index.php/Apple_QuickTime_IMA_ADPCM)
  - [wiki.multimedia.cx: Qclp](https://wiki.multimedia.cx/index.php/QCELP)
