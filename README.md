@@ -25,7 +25,8 @@ compiling before running them).
     cd tools/aiff-rs-tester
     cargo build
     cd ../..
-    python3 runner.py tools/aiff-rs-tester/target/debug/aiff-rs-tester
+    python3 runner.py tools/aiff-rs-tester/target/debug/aiff-rs-tester      # mac/linux
+    python3 runner.py tools\aiff-rs-tester\target\debug\aiff-rs-tester.exe  # windows
     # 50 passed, 64 failed.
 
 [The results for macOS 12.4 AudioToolBox API](result-audiotoolbox-tester.md)
