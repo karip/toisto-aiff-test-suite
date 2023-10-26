@@ -77,7 +77,10 @@ if 'TinyTag' in vars():
     if tag.album:
         tags.append(f'        "TAL": "{tag.album}"')
     if tag.track:
-        tags.append(f'        "TRK": "{tag.track}/{tag.track_total}"')
+        if tag.track_total:
+            tags.append(f'        "TRK": "{tag.track}/{tag.track_total}"')
+        else:
+            tags.append(f'        "TRK": "{tag.track}"')
     if tag.year:
         tags.append(f'        "TYE": "{tag.year}"')
     if tag.genre:
