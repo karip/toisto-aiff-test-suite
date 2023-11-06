@@ -5,6 +5,7 @@
         "platform": "macOS 12.4",
         "command": "afconvert -d Qclp --no-filler tests/aiff/aiff-samplesize-16.aiff tests/compressed/compressed-qclp.aifc"
     },
+    "format": "aiff-c",
     "sampleRate": 8000,
     "channels": 1,
     "codec": "Qclp",

@@ -5,6 +5,7 @@
         "platform": "macOS 12.4",
         "command": "tools/audiotoolbox-writer 11025 bei8 1 tests/aiff/aiff-samplerate-11025.aiff"
     },
+    "format": "aiff",
     "sampleRate": 11025,
     "channels": 1,
     "codec": "pcm_bei",

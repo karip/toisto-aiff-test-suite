@@ -2,6 +2,7 @@
     "testinfo": {
         "description": "Sample rate infinity. QuickTime Player cannot play this file."
     },
+    "format": "aiff",
     "sampleRate": "inf",
     "channels": 1,
     "codec": "pcm_bei",

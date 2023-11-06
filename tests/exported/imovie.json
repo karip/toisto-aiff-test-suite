@@ -5,6 +5,7 @@
         "version": "10.3.3",
         "platform": "macOS 12.4"
     },
+    "format": "aiff",
     "sampleRate": 48000,
     "channels": 2,
     "codec": "pcm_bei",
