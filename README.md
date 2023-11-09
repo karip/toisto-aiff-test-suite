@@ -113,8 +113,8 @@ for each channel. The range of values depends on the codec:
 | bei 25..32 | [-2147483648, 2147483647] | Uncompressed 25..32-bit signed integer                 |
 | lei 16     |      [-32768, 32767]      | Uncompressed 16-bit signed integer (little endian)     |
 | lei 32     | [-2147483648, 2147483647] | Uncompressed 32-bit signed integer (little endian)     |
-| bef 32     |        [-1.0, 1.0]        | Uncompressed 32-bit float                              |
-| bef 64     |        [-1.0, 1.0]        | Uncompressed 64-bit float                              |
+| bef 32     |        [-1.0, 1.0]        | Uncompressed 32-bit floating point                     |
+| bef 64     |        [-1.0, 1.0]        | Uncompressed 64-bit floating point                     |
 | beu 8      |         [0, 255]          | Uncompressed 8-bit unsigned integer                    |
 | ulaw       |      [-32768, 32767]      | µLaw 2:1                                               |
 | alaw       |      [-32768, 32767]      | ALaw 2:1                                               |
@@ -124,11 +124,11 @@ for each channel. The range of values depends on the codec:
 | QDM2       |      [-32768, 32767]      | QDesign Music 2                                        |
 | MAC3       |      [-32768, 32767]      | MACE 3:1                                               |
 | MAC6       |      [-32768, 32767]      | MACE 6:1                                               |
-| agsm       |      [-32768, 32767]      | Apple GSM 10:1                                         |
-| ULAW       |      [-32768, 32767]      | µLaw 2:1 (uppercase) - supported by Python             |
-| ALAW       |      [-32768, 32767]      | ALaw 2:1 (uppercase) - supported by Python             |
-| G722       |      [-32768, 32767]      | G7.22 (ADPCM) - supported by Python                    |
-| DVWV       |  signed 16/24 bit range   | Delta With Variable Word Width - supported by Audacity |
+| GSM        |      [-32768, 32767]      | GSM 6.10 (supported by Audacity)                       |
+| ULAW       |      [-32768, 32767]      | µLaw 2:1 uppercase (supported by Aucadity and Python)  |
+| ALAW       |      [-32768, 32767]      | ALaw 2:1 uppercase (supported by Aucadity and Python)  |
+| G722       |      [-32768, 32767]      | G7.22 (ADPCM) (supported by Python)                    |
+| DVWV       |  signed 16/24 bit range   | Delta With Variable Word Width (supported by Audacity) |
 
 ## Other test files
 

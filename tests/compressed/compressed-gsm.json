@@ -8,7 +8,7 @@
     "format": "aiff-c",
     "sampleRate": 44100,
     "channels": 1,
-    "codec": "agsm",
+    "codec": "GSM ",
     "sampleSize": 0,
     "samplesPerChannel": 4480,
     "startSamples": [
