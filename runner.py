@@ -15,9 +15,9 @@ def run_command(command, filename, verbose):
     cmd = command + " " + filename
     if verbose:
         print("Command: "+cmd)
-    ch = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
-    result = ch.communicate()[0]
-    return (result, ch.returncode)
+    ch = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    res = ch.communicate()
+    return (res[0], res[1], ch.returncode)
 
 def check_key(testresult, testref, key):
     if not key in testresult:
@@ -101,6 +101,7 @@ filenames.sort()
 
 totalcount = 0
 failcount = 0
+needs_linefeed_before_ok = False
 
 # process json files
 for filename in filenames:
@@ -124,11 +125,14 @@ for filename in filenames:
         raise
 
     # execute command for aiff file
-    (res, exitstatus) = run_command(args["command"], aiff_filename, args["verbose"])
+    (res, cmderror, exitstatus) = run_command(args["command"], aiff_filename, args["verbose"])
     if exitstatus != 0:
-        print("FAIL: "+aiff_filename)
+        print("\nFAIL: "+aiff_filename)
+        if len(cmderror) > 0:
+            print(cmderror.decode("utf-8").strip())
         print(" - process returned non-zero exit status: "+str(exitstatus))
         failcount += 1
+        needs_linefeed_before_ok = True
         continue
 
     # some commands return extra text before json, so remove it
@@ -189,6 +193,8 @@ for filename in filenames:
                     if tres != sample:
                         errors.append(" - values differ for \"startSamples\", channel " + str(chinx) + ", index " + str(inx) + ", got: " + str(tres) + ", expected: " + str(sample))
                         break
+        else:
+            errors.append(" - unsupported: startSamples");
 
     ck = check_key(testresult, testref, "endSamples")
     if ck != "":
@@ -204,21 +210,34 @@ for filename in filenames:
                     if tres != sample:
                         errors.append(" - values differ for \"endSamples\", channel " + str(chinx) + ", index " + str(inx) + ", got: " + str(tres) + ", expected: " + str(sample))
                         break
+        else:
+            errors.append(" - unsupported: endSamples");
 
-    # unsupported error messages are not failures
+    # unsupported error messages are not failures (except unsupported samples)
     failed = False
     for e in errors:
-        if e != "" and not e.startswith(" - unsupported"):
+        if (e != "" and not e.startswith(" - unsupported")) or e == " - unsupported: startSamples" or e == " - unsupported: endSamples":
             failed = True
             break
+
     if failed:
+        print("\nFAIL : "+aiff_filename)
         failcount += 1
-        print("FAIL: "+aiff_filename)
+        needs_linefeed_before_ok = True
     else:
-        print("OK  : "+aiff_filename)
+        if needs_linefeed_before_ok:
+            print("")
+        needs_linefeed_before_ok = False
+        print("OK   : "+aiff_filename)
+
+    if len(cmderror) > 0:
+        print(cmderror.decode("utf-8").strip())
+        needs_linefeed_before_ok = True
+
     non_blank_errors = [e for e in errors if e != ""]
     errorstr = "\n".join(non_blank_errors)
     if errorstr != "":
         print(errorstr)
+        needs_linefeed_before_ok = True
 
 print("Total " + str(totalcount) + ": " + str(totalcount-failcount) +  " passed, " + str(failcount) +  " failed.")
