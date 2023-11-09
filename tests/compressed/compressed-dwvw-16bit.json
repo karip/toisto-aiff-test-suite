@@ -7,7 +7,7 @@
     },
     "format": "aiff-c",
     "sampleRate": 44100,
-    "channels": 2,
+    "channels": 1,
     "codec": "DWVW",
     "sampleSize": 0,
     "samplesPerChannel": 4411,
