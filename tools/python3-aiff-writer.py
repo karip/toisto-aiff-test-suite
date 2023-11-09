@@ -34,7 +34,7 @@ samplebytes = math.ceil(args.bits / 8)
 afile.setsampwidth(math.ceil(samplebytes))
 if args.codec != "":
     names = {
-        "ulaw": "Python compressed μ-Law 2:1",
+        "ulaw": "Python compressed u-Law 2:1",
         "alaw": "Python compressed A-Law 2:1",
         "ULAW": "Python compressed ULAW",
         "ALAW": "Python compressed ALAW",
