@@ -78,7 +78,7 @@ the audio file. The properties in the json file are:
  - `inst` - the instrument chunk data with fields: `baseNote`, `detune`, `lowNote`, `highNote`,
     `lowVelocity`, `highVelocity`, `gain`, `sustainLoop` (`playMode`, `beginLoop`, `endLoop`),
     `releaseLoop` (`playMode`, `beginLoop`, `endLoop`)
- - `midi` - a list of bytes in the MIDI chunk
+ - `midi` - a list of a list of bytes in the MIDI chunks (multiple MIDI chunks are allowed)
  - `aesd` - a list of bytes in the AESD chunk
  - `appl` - a list of bytes in the APPL chunk
  - `name` - text of the NAME chunk
