@@ -1,6 +1,6 @@
 {
     "testinfo": {
-        "description": "CD Track imported into iTunes library as 16-bit stereo",
+        "description": "CD Track imported into iTunes library as 16-bit stereo (ID3 missing a pad byte)",
         "software": "iTunes",
         "version": "11.4",
         "platform": "Mac OS X 10.6"
