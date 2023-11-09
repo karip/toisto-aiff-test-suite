@@ -60,6 +60,22 @@ def compare_field(testresult, testref, key):
     refval = testref[key]
     return compare_value(resval, refval, key)
 
+def compare_samples(testref, testresult, fieldname, errors):
+    for chinx, chsamples in enumerate(testref[fieldname]):
+        for inx, sample in enumerate(chsamples):
+            if chinx < len(testresult[fieldname]) and inx < len(testresult[fieldname][chinx]):
+                tres = testresult[fieldname][chinx][inx]
+            else:
+                tres = "none"
+            if isinstance(tres, (int, float)) and isinstance(sample, (int, float)):
+                # allow some variation in values, because of possible rounding errors
+                if tres < sample-0.000002 or tres > sample+0.000002:
+                    errors.append(" - values differ for \"" + fieldname + "\", channel " + str(chinx) + ", index " + str(inx) + ", got: " + str(tres) + ", expected: " + str(sample))
+                    return
+            elif tres != sample:
+                errors.append(" - values differ for \"" + fieldname + "\", channel " + str(chinx) + ", index " + str(inx) + ", got: " + str(tres) + ", expected: " + str(sample))
+                return
+
 # main
 
 args = {
@@ -184,15 +200,7 @@ for filename in filenames:
         errors.append(ck)
     else:
         if testresult["startSamples"] != "-unsupported-":
-            for chinx, chsamples in enumerate(testref["startSamples"]):
-                for inx, sample in enumerate(chsamples):
-                    if chinx < len(testresult["startSamples"]) and inx < len(testresult["startSamples"][chinx]):
-                        tres = testresult["startSamples"][chinx][inx]
-                    else:
-                        tres = 0
-                    if tres != sample:
-                        errors.append(" - values differ for \"startSamples\", channel " + str(chinx) + ", index " + str(inx) + ", got: " + str(tres) + ", expected: " + str(sample))
-                        break
+            compare_samples(testref, testresult, "startSamples", errors)
         else:
             errors.append(" - unsupported: startSamples");
 
@@ -201,15 +209,7 @@ for filename in filenames:
         errors.append(ck)
     else:
         if testresult["endSamples"] != "-unsupported-":
-            for chinx, chsamples in enumerate(testref["endSamples"]):
-                for inx, sample in enumerate(chsamples):
-                    if chinx < len(testresult["endSamples"]) and inx < len(testresult["endSamples"][chinx]):
-                        tres = testresult["endSamples"][chinx][inx]
-                    else:
-                        tres = 0
-                    if tres != sample:
-                        errors.append(" - values differ for \"endSamples\", channel " + str(chinx) + ", index " + str(inx) + ", got: " + str(tres) + ", expected: " + str(sample))
-                        break
+            compare_samples(testref, testresult, "endSamples", errors)
         else:
             errors.append(" - unsupported: endSamples");
 
