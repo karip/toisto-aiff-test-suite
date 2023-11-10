@@ -93,6 +93,25 @@ void writeBytes(const char *filename, AudioFileTypeID atype, AudioStreamBasicDes
         exit(-1);
     }
 
+#ifdef WRITE_MARKERS // enable this code block to write test markers
+    UInt32 dataSize = NumAudioFileMarkersToNumBytes(1);
+    AudioFileMarkerList *markers = (AudioFileMarkerList*)malloc(dataSize);
+    markers->mSMPTE_TimeType = 0;
+    markers->mNumberMarkers = 1;
+    AudioFileMarker *marker = &markers->mMarkers[0];
+    memset(marker, 0, sizeof(AudioFileMarker));
+    marker->mFramePosition = 0.0;
+    marker->mMarkerID = 5;
+    marker->mName = CFSTR("MyMark");
+    error = AudioFileSetProperty(audioFile, kAudioFilePropertyMarkerList, dataSize, markers);
+    if (error != noErr) {
+        printf("* ERROR: Can't set marker property\n");
+        exit(-1);
+    }
+    printf("Wrote markers.\n");
+    free(markers);
+#endif
+
     std::vector<uint8_t> data;
     for (size_t i = 0; i < sampleData.size(); ++i) {
         std::pair<double, double> sample = sampleData[i];
@@ -125,6 +144,7 @@ void writeBytes(const char *filename, AudioFileTypeID atype, AudioStreamBasicDes
         printf("* ERROR: Can't write to audio file\n");
         exit(-1);
     }
+
     error = AudioFileClose(audioFile);
     if (error != noErr) {
         printf("* ERROR: Can't close audio file\n");
