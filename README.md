@@ -29,7 +29,7 @@ compiling before running them).
     python3 runner.py tools\aiff-rs-tester\target\debug\aiff-rs-tester.exe  # windows
     # 50 passed, 64 failed.
 
-[The results for macOS 12.4 AudioToolBox API](result-audiotoolbox-tester.md)
+[The results for macOS 13.6 AudioToolBox API](result-audiotoolbox-tester.md)
 running audiotoolbox-tester.
 
 ## Test cases
