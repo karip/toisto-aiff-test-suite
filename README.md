@@ -5,9 +5,9 @@ This is an unofficial AIFF / AIFF-C audio file test suite.
 
 ## Usage
 
-The `runner.py` script runs the test suite against the command given to it.
+The `runner.py` script runs the test suite for the command given to it.
 
-Here's examples running the test suite against macOS AudioToolBox API,
+Here's examples running the test suite for macOS AudioToolBox API,
 python aifc module or Rust aiff-rs. (AudioToolBox and aiff-rs require
 compiling before running them).
 
@@ -45,7 +45,7 @@ audio files. The folder contains subfolders:
 The `invalid` folder contains invalid AIFF files, which are not part of
 the tests. They can be used to check how AIFF readers react to invalid files.
 The readers may or may not read them, but hopefully they won't crash.
-Execute runner.py with input folder set to `invalid` to test against them:
+Run runner.py with `invalid` as the input folder:
 
     python3 runner.py tools/audiotoolbox-tester -i invalid
 
@@ -91,6 +91,7 @@ the audio file. The properties in the json file are:
     `channelDescriptions` (`label`, `flags`, `coordinates`)
  - `hash` - an array of 20 bytes containing the SHA-1 hash of the audio data
  - `samplesPerChannel` - the number of samples per channel
+ - `tolerance` - how much samples values may differ from the expected values, default is 0
  - `startSamples` - a list of channels containing a list of samples (only the first 100-300 samples)
  - `endSamples` - a list of channels containing a list of samples (only the last 30 samples)
 

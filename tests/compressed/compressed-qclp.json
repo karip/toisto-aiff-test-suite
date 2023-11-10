@@ -11,6 +11,7 @@
     "codec": "Qclp",
     "sampleSize": 0,
     "samplesPerChannel": 960,
+    "tolerance": 4,
     "startSamples": [
         [ 0, 0, 0, 0, -4, 0, 4, -4, -4, 0, -4, 0, 0, 0, 0, 0,
           0, 0, 0, 0, -4, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4, 0,

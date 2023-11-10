@@ -60,7 +60,7 @@ def compare_field(testresult, testref, key):
     refval = testref[key]
     return compare_value(resval, refval, key)
 
-def compare_samples(testref, testresult, fieldname, errors):
+def compare_samples(testref, testresult, fieldname, tolerance, errors):
     for chinx, chsamples in enumerate(testref[fieldname]):
         for inx, sample in enumerate(chsamples):
             if chinx < len(testresult[fieldname]) and inx < len(testresult[fieldname][chinx]):
@@ -69,7 +69,7 @@ def compare_samples(testref, testresult, fieldname, errors):
                 tres = "none"
             if isinstance(tres, (int, float)) and isinstance(sample, (int, float)):
                 # allow some variation in values, because of possible rounding errors
-                if tres < sample-0.000002 or tres > sample+0.000002:
+                if tres < sample-tolerance or tres > sample+tolerance:
                     errors.append(" - values differ for \"" + fieldname + "\", channel " + str(chinx) + ", index " + str(inx) + ", got: " + str(tres) + ", expected: " + str(sample))
                     return
             elif tres != sample:
@@ -195,12 +195,16 @@ for filename in filenames:
 
     errors.append(compare_field(testresult, testref, "samplesPerChannel"))
 
+    tolerance = 0
+    if "tolerance" in testref:
+        tolerance = float(testref["tolerance"])
+
     ck = check_key(testresult, testref, "startSamples")
     if ck != "":
         errors.append(ck)
     else:
         if testresult["startSamples"] != "-unsupported-":
-            compare_samples(testref, testresult, "startSamples", errors)
+            compare_samples(testref, testresult, "startSamples", tolerance, errors)
         else:
             errors.append(" - unsupported: startSamples");
 
@@ -209,7 +213,7 @@ for filename in filenames:
         errors.append(ck)
     else:
         if testresult["endSamples"] != "-unsupported-":
-            compare_samples(testref, testresult, "endSamples", errors)
+            compare_samples(testref, testresult, "endSamples", tolerance, errors)
         else:
             errors.append(" - unsupported: endSamples");
 
