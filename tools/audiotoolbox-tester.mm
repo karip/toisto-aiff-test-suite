@@ -199,11 +199,24 @@ std::vector<std::vector<double> > readExtAudioData(const char *filename)
     bufferList.mNumberBuffers = 1;
     bufferList.mBuffers[0].mNumberChannels = channels;
     size_t datasize = frames * appDataFormat.mBytesPerFrame;
-    void *data = malloc(datasize);
+    char *data = (char *)malloc(datasize);
     bufferList.mBuffers[0].mDataByteSize = datasize;
     bufferList.mBuffers[0].mData = data;
-    UInt32 frame_count_32 = frames;
-    err = ExtAudioFileRead(fileID, &frame_count_32, &bufferList);
+    UInt32 total_frames_read = 0;
+    while (total_frames_read < frames) {
+        bufferList.mBuffers[0].mData = data + total_frames_read * appDataFormat.mBytesPerFrame;
+        UInt32 frame_count_32 = frames - total_frames_read;
+        // takes in frame count to read (frame_count_32) and returns how many was read (frame_count_32)
+        err = ExtAudioFileRead(fileID, &frame_count_32, &bufferList);
+        if (err != noErr) {
+            printerr("Error reading sample data\n");
+            exit(-1);
+        }
+        if (frame_count_32 == 0) {
+            break;
+        }
+        total_frames_read += frame_count_32;
+    }
     size_t pos = 0;
     while (pos < frames * channels) {
         for (int ch = 0; ch < channels; ++ch) {
