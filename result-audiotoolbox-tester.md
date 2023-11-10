@@ -1,5 +1,5 @@
 
-# Results for running audiotoolbox-tester on macOS 12.4
+# Results for running audiotoolbox-tester on macOS 13.6
 
 ~~~
 > python3 runner.py tools/audiotoolbox-tester
@@ -41,29 +41,44 @@ OK  : tests/aiff/aiff-channels-2.aiff
 OK  : tests/aiff/aiff-channels-4.aiff
 OK  : tests/aiff/aiff-chunk-aesd.aiff
  - unsupported: aesd
+
 FAIL: tests/aiff/aiff-chunk-anno-two.aiff
  - values differ for "anno", got: '['FirstAnno']', expected: '['FirstAnno', 'SecondAnno']'
+
 OK  : tests/aiff/aiff-chunk-anno.aiff
+OK  : tests/aiff/aiff-chunk-appl-two.aiff
+ - unsupported: appl
+
 OK  : tests/aiff/aiff-chunk-appl.aiff
  - unsupported: appl
+
 OK  : tests/aiff/aiff-chunk-auth.aiff
 OK  : tests/aiff/aiff-chunk-chan.aiff
 OK  : tests/aiff/aiff-chunk-comments-one.aiff
+
 FAIL: tests/aiff/aiff-chunk-comments-ref-marker.aiff
  - value missing: comments
+
 FAIL: tests/aiff/aiff-chunk-comments-two.aiff
  - values differ for "comments", got: '[{'timeStamp': 0, 'marker': 0, 'text': 'Hello'}]', expected: '[{'timeStamp': 0, 'marker': 0, 'text': 'Hello'}, {'timeStamp': 3740546029, 'marker': 0, 'text': 'Text'}]'
+
 OK  : tests/aiff/aiff-chunk-comments-zero.aiff
 OK  : tests/aiff/aiff-chunk-copy.aiff
 OK  : tests/aiff/aiff-chunk-fllr.aiff
 OK  : tests/aiff/aiff-chunk-hash.aiff
  - unsupported: hash
+
 OK  : tests/aiff/aiff-chunk-inst.aiff
  - unsupported: inst
+
 OK  : tests/aiff/aiff-chunk-markers-zero.aiff
 OK  : tests/aiff/aiff-chunk-markers.aiff
+OK  : tests/aiff/aiff-chunk-midi-two.aiff
+ - unsupported: midi
+
 OK  : tests/aiff/aiff-chunk-midi.aiff
  - unsupported: midi
+
 OK  : tests/aiff/aiff-chunk-name.aiff
 OK  : tests/aiff/aiff-chunk-ssnd-before-comm.aiff
 OK  : tests/aiff/aiff-chunk-ssnd-blocksize.aiff
@@ -90,39 +105,52 @@ OK  : tests/aiff/aiff-samplesize-29.aiff
 OK  : tests/aiff/aiff-samplesize-32.aiff
 OK  : tests/aiff/aiff-samplesize-4.aiff
 OK  : tests/aiff/aiff-samplesize-8.aiff
-* ERROR: can't open file: tests/compressed/compressed-agsm.aifc (fmt?)
-FAIL: tests/compressed/compressed-agsm.aifc
- - process returned non-zero exit status: 255
-* ERROR: can't open file: tests/compressed/compressed-alaw-uppercase.aifc (fmt?)
+
 FAIL: tests/compressed/compressed-alaw-uppercase.aifc
+* ERROR: can't open file: tests/compressed/compressed-alaw-uppercase.aifc (fmt?)
  - process returned non-zero exit status: 255
+
 OK  : tests/compressed/compressed-alaw.aifc
-* ERROR: can't open file: tests/compressed/compressed-dwvw-16bit.aifc (fmt?)
+
 FAIL: tests/compressed/compressed-dwvw-16bit.aifc
+* ERROR: can't open file: tests/compressed/compressed-dwvw-16bit.aifc (fmt?)
  - process returned non-zero exit status: 255
-* ERROR: can't open file: tests/compressed/compressed-dwvw-24bit.aifc (fmt?)
+
 FAIL: tests/compressed/compressed-dwvw-24bit.aifc
+* ERROR: can't open file: tests/compressed/compressed-dwvw-24bit.aifc (fmt?)
  - process returned non-zero exit status: 255
-* ERROR: can't open file: tests/compressed/compressed-g722.aifc (fmt?)
+
 FAIL: tests/compressed/compressed-g722.aifc
+* ERROR: can't open file: tests/compressed/compressed-g722.aifc (fmt?)
  - process returned non-zero exit status: 255
+
+FAIL: tests/compressed/compressed-gsm.aifc
+* ERROR: can't open file: tests/compressed/compressed-gsm.aifc (fmt?)
+ - process returned non-zero exit status: 255
+
 OK  : tests/compressed/compressed-ima4.aifc
-* ERROR: can't open file: tests/compressed/compressed-mac3-ch2.aifc (fmt?)
+
 FAIL: tests/compressed/compressed-mac3-ch2.aifc
+* ERROR: can't open file: tests/compressed/compressed-mac3-ch2.aifc (fmt?)
  - process returned non-zero exit status: 255
-* ERROR: can't open file: tests/compressed/compressed-mac3.aifc (fmt?)
+
 FAIL: tests/compressed/compressed-mac3.aifc
+* ERROR: can't open file: tests/compressed/compressed-mac3.aifc (fmt?)
  - process returned non-zero exit status: 255
-* ERROR: can't open file: tests/compressed/compressed-mac6.aifc (fmt?)
+
 FAIL: tests/compressed/compressed-mac6.aifc
+* ERROR: can't open file: tests/compressed/compressed-mac6.aifc (fmt?)
  - process returned non-zero exit status: 255
+
 OK  : tests/compressed/compressed-qclp.aifc
 OK  : tests/compressed/compressed-qdm2.aifc
 OK  : tests/compressed/compressed-qdmc.aifc
 OK  : tests/compressed/compressed-ulaw-ch2.aifc
-* ERROR: can't open file: tests/compressed/compressed-ulaw-uppercase.aifc (fmt?)
+
 FAIL: tests/compressed/compressed-ulaw-uppercase.aifc
+* ERROR: can't open file: tests/compressed/compressed-ulaw-uppercase.aifc (fmt?)
  - process returned non-zero exit status: 255
+
 OK  : tests/compressed/compressed-ulaw.aifc
 OK  : tests/exported/audacity-i8-id3.aiff
 OK  : tests/exported/audacity-i8.aiff
@@ -137,65 +165,85 @@ OK  : tests/exported/itunes-8bit-mono.aiff
 OK  : tests/exported/motion.aifc
 OK  : tests/exported/python3-alaw.aifc
 OK  : tests/exported/python3-ulaw.aifc
-* ERROR: Can't set app format
+
 FAIL: tests/exported/quicktime5-alaw.aifc
+* ERROR: Can't set app format
  - process returned non-zero exit status: 255
+
 OK  : tests/exported/quicktime5-fl32.aifc
 OK  : tests/exported/quicktime5-fl64.aifc
 OK  : tests/exported/quicktime5-samplesize-16.aiff
 OK  : tests/exported/quicktime5-samplesize-24.aiff
 OK  : tests/exported/quicktime5-samplesize-32.aiff
 OK  : tests/exported/quicktime5-samplesize-8.aiff
-* ERROR: Can't set app format
+
 FAIL: tests/exported/quicktime5-ulaw.aifc
+* ERROR: Can't set app format
  - process returned non-zero exit status: 255
-Total 114: 100 passed, 14 failed.
+Total 116: 102 passed, 14 failed.
 ~~~
 
 ~~~
 > python3 runner.py tools/audiotoolbox-tester -i invalid
 
 Testing command: tools/audiotoolbox-tester
-* ERROR: can't open file: invalid/invalid-aifc-no-comm.aifc (dta?)
+
 FAIL: invalid/invalid-aifc-no-comm.aifc
+* ERROR: can't open file: invalid/invalid-aifc-no-comm.aifc (dta?)
  - process returned non-zero exit status: 255
-* ERROR: can't open file: invalid/invalid-aiff-no-comm.aiff (dta?)
+
 FAIL: invalid/invalid-aiff-no-comm.aiff
+* ERROR: can't open file: invalid/invalid-aiff-no-comm.aiff (dta?)
  - process returned non-zero exit status: 255
-* ERROR: can't open file: invalid/invalid-channels-0.aiff (fmt?)
+
 FAIL: invalid/invalid-channels-0.aiff
+* ERROR: can't open file: invalid/invalid-channels-0.aiff (fmt?)
  - process returned non-zero exit status: 255
-* ERROR: can't open file: invalid/invalid-chunk-comm-short.aifc (fmt?)
+
 FAIL: invalid/invalid-chunk-comm-short.aifc
+* ERROR: can't open file: invalid/invalid-chunk-comm-short.aifc (fmt?)
  - process returned non-zero exit status: 255
+
 OK  : invalid/invalid-chunk-id.aiff
-* ERROR: can't open file: invalid/invalid-compression-type.aifc (fmt?)
+
 FAIL: invalid/invalid-compression-type.aifc
+* ERROR: can't open file: invalid/invalid-compression-type.aifc (fmt?)
  - process returned non-zero exit status: 255
+
 OK  : invalid/invalid-extra-garbage-at-end.aiff
 OK  : invalid/invalid-file-too-short.aiff
 OK  : invalid/invalid-fver-bad-value.aifc
 OK  : invalid/invalid-no-fver.aifc
-* ERROR: can't open file: invalid/invalid-samplerate-0.aiff (fmt?)
+
 FAIL: invalid/invalid-samplerate-0.aiff
+* ERROR: can't open file: invalid/invalid-samplerate-0.aiff (fmt?)
  - process returned non-zero exit status: 255
-* ERROR: can't open file: invalid/invalid-samplerate-inf.aiff (fmt?)
+
 FAIL: invalid/invalid-samplerate-inf.aiff
+* ERROR: can't open file: invalid/invalid-samplerate-inf.aiff (fmt?)
  - process returned non-zero exit status: 255
-* ERROR: can't open file: invalid/invalid-samplerate-nan.aiff (fmt?)
+
 FAIL: invalid/invalid-samplerate-nan.aiff
+* ERROR: can't open file: invalid/invalid-samplerate-nan.aiff (fmt?)
  - process returned non-zero exit status: 255
-* ERROR: can't open file: invalid/invalid-samplesize-0.aiff (fmt?)
+
 FAIL: invalid/invalid-samplesize-0.aiff
+* ERROR: can't open file: invalid/invalid-samplesize-0.aiff (fmt?)
  - process returned non-zero exit status: 255
-* ERROR: Can't set app format
+
 FAIL: invalid/invalid-samplesize-33.aiff
+* ERROR: Can't set app format
  - process returned non-zero exit status: 255
+
+FAIL: invalid/invalid-ssnd-large-size.aiff
+ - values differ for "samplesPerChannel", got: '65527', expected: '4411'
+ - values differ for "endSamples", channel 0, index 0, got: 0, expected: 33
+
 OK  : invalid/unspecified-chunk-anno-non-ascii.aiff
 OK  : invalid/unspecified-chunk-auth-non-ascii.aiff
 OK  : invalid/unspecified-chunk-comments-non-ascii.aiff
 OK  : invalid/unspecified-chunk-copy-non-ascii.aiff
 OK  : invalid/unspecified-chunk-markers-non-ascii.aiff
 OK  : invalid/unspecified-chunk-name-non-ascii.aiff
-Total 21: 11 passed, 10 failed.
+Total 22: 11 passed, 11 failed.
 ~~~
