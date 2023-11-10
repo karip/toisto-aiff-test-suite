@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "Invalid compression type with non-ascii characters. QuickTime Player cannot play this file."
+        "description": "Invalid compression type with non-ascii characters",
+        "notes": "QuickTime Player 10.5 cannot play this file."
     },
     "format": "aiff-c",
     "sampleRate": 44100,

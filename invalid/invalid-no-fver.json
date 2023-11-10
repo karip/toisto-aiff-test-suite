@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "No FVER chunk. QuickTime Player can play this file."
+        "description": "No FVER chunk",
+        "notes": "QuickTime Player 10.5 can play this file."
     },
     "format": "aiff-c",
     "sampleRate": 44100,

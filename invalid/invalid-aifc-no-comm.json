@@ -1,5 +1,6 @@
 {
     "testinfo": {
-        "description": "AIFC file without the COMM chunk. QuickTime Player cannot play this file."
+        "description": "AIFC file without the COMM chunk",
+        "notes": "QuickTime Player 10.5 cannot play this file."
     }
 }

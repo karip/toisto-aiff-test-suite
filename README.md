@@ -55,7 +55,8 @@ Each audio file has a json file describing the expected result for reading
 the audio file. The properties in the json file are:
 
  - `testinfo` - meta info about the test
-   - `description` - info about the test file
+   - `description` - short description of the test file
+   - `notes` - additional notes about the test
    - `software` - name of the software used to create the file, if this is
                   missing, then the file was created manually in a hex editor
    - `version` - version of the software

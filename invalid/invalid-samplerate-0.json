@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "Sample rate zero. QuickTime Player cannot play this file."
+        "description": "Sample rate zero",
+        "notes": "QuickTime Player 10.5 cannot play this file."
     },
     "format": "aiff",
     "sampleRate": 0,

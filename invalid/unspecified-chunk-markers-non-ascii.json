@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "Non-ascii chars in markers are undefined in the AIFF spec, but Audio Toolbox API seems to decode non-ascii chars as UTF-8"
+        "description": "Non-ascii chars in markers are undefined in the AIFF spec",
+        "notes": "Audio Toolbox kAudioFilePropertyMarkerList API seems to decode non-ascii chars as UTF-8."
     },
     "format": "aiff",
     "sampleRate": 44100,

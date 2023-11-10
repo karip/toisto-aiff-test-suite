@@ -221,14 +221,14 @@ for filename in filenames:
             break
 
     if failed:
-        print("\nFAIL : "+aiff_filename)
+        print("\nFAIL: "+aiff_filename)
         failcount += 1
         needs_linefeed_before_ok = True
     else:
         if needs_linefeed_before_ok:
             print("")
         needs_linefeed_before_ok = False
-        print("OK   : "+aiff_filename)
+        print("OK  : "+aiff_filename)
 
     if len(cmderror) > 0:
         print(cmderror.decode("utf-8").strip())

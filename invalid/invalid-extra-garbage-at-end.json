@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "Garbage data after the SSND chunk. QuickTime Player can play this file."
+        "description": "Garbage data after the SSND chunk",
+        "notes": "QuickTime Player 10.5 can play this file."
     },
     "format": "aiff",
     "sampleRate": 44100,

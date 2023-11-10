@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "AIFF file with the SSND chunk size set to a value (0xffff) larger than the file size. QuickTime Player plays this file using the SSND size as the sample count."
+        "description": "AIFF file with the SSND chunk size set to a value (0xffff) larger than the file size",
+        "notes": "QuickTime Player 10.5 plays this file using the SSND size as the sample count."
     },
     "format": "aiff",
     "sampleRate": 44100,

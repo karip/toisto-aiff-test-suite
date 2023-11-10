@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "Zero channels. QuickTime Player cannot play this file."
+        "description": "Zero channels",
+        "notes": "QuickTime Player 10.5 cannot play this file."
     },
     "format": "aiff",
     "sampleRate": 44100,

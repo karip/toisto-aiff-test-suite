@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "The Comments (COMT) chunk with two comments and timestamp 2022-07-13T08:33:49"
+        "description": "The Comments (COMT) chunk with two comments",
+        "notes": "The timestamp of the second comment is 2022-07-13T08:33:49"
     },
     "format": "aiff",
     "sampleRate": 44100,

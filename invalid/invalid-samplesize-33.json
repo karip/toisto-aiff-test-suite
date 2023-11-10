@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "Sample size 33 bits. QuickTime Player cannot play this file."
+        "description": "Sample size 33 bits",
+        "notes": "QuickTime Player 10.5 cannot play this file."
     },
     "format": "aiff",
     "sampleRate": 44100,

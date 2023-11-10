@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "μ-Law compressed audio file, note that compression name is encoded as UTF-8",
+        "description": "μ-Law compressed audio file",
+        "notes": "The compression name is encoded as UTF-8",
         "software": "Audio Toolbox API",
         "platform": "macOS 12.4",
         "command": "tools/audiotoolbox-writer 44100 ulaw 1 tests/compressed/compressed-ulaw.aifc"

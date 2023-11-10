@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "The COMM chunk too short without the compression type. QuickTime Player cannot play this file."
+        "description": "The COMM chunk too short without the compression type",
+        "notes": "QuickTime Player 10.5 cannot play this file."
     },
     "format": "aiff-c",
     "sampleRate": 44100,
