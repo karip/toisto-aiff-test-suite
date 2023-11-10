@@ -1,6 +1,7 @@
 {
     "testinfo": {
-        "description": "The Application (APPL) chunk"
+        "description": "The Application (APPL) chunk",
+        "notes": "The APPL chunk starts with the application signature 'stoc' and pstring 'test'"
     },
     "format": "aiff",
     "sampleRate": 44100,
