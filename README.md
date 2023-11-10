@@ -91,7 +91,7 @@ the audio file. The properties in the json file are:
     `channelDescriptions` (`label`, `flags`, `coordinates`)
  - `hash` - an array of 20 bytes containing the SHA-1 hash of the audio data
  - `samplesPerChannel` - the number of samples per channel
- - `tolerance` - how much samples values may differ from the expected values, default is 0
+ - `tolerance` - how much sample values may differ from the expected values, default is 0
  - `startSamples` - a list of channels containing a list of samples (only the first 100-300 samples)
  - `endSamples` - a list of channels containing a list of samples (only the last 30 samples)
 
