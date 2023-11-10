@@ -1,6 +1,7 @@
 {
     "testinfo": {
         "description": "Example reference json file",
+        "notes": "This is an example file with all possible fields.",
         "software": "Software-used-to-create-the-aiff-file",
         "version": "1.0",
         "platform": "macOS 12.4",
@@ -30,12 +31,9 @@
         "sustainLoop": { "playMode": 1, "beginLoop": 101, "endLoop": 205 },
         "releaseLoop": { "playMode": 0, "beginLoop": 101, "endLoop": 205 }
     },
-    "midi": [ 0, 1, 2, 3, 4 ],
+    "midi": [ [ 240, 127, 127, 4, 1, 127, 63, 247 ] ],
     "aesd": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-    "appl": {
-      "applicationSignature": 4354325,
-      "data": [ 0, 1, 2, 3, 4, 5 ]
-    },
+    "appl": [ [ 115, 116, 111, 99, 4, 116, 101, 115, 116, 1, 2 ] ],
     "name": "sound name",
     "auth": "author",
     "(c)": "2022 copyright",
@@ -58,6 +56,7 @@
     },
     "hash": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
     "samplesPerChannel": 20,
+    "tolerance": 1,
     "startSamples": [
         [ 10, 10, 10, 10, 10, 10, 10, 10, 60, 70, 80, 90, 100, 0, 50, 0, 50, 0, 50, 0 ],
         [ 0, 0, 0, 0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 20, 20, 20, 0, 0, 0, 0 ]
