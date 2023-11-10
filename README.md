@@ -90,7 +90,8 @@ the audio file. The properties in the json file are:
  - `chan` - channel layout (the CHAN chunk) with fields: `channelLayoutTag`, `channelBitmap`,
     `channelDescriptions` (`label`, `flags`, `coordinates`)
  - `hash` - an array of 20 bytes containing the SHA-1 hash of the audio data
- - `samplesPerChannel` - the number of samples per channel
+ - `samplesPerChannel` - the number of samples per channel after samples have been decoded
+    (this may differ from the COMM chunk numSampleFrames value)
  - `tolerance` - how much sample values may differ from the expected values, default is 0
  - `startSamples` - a list of channels containing a list of samples (only the first 100-300 samples)
  - `endSamples` - a list of channels containing a list of samples (only the last 30 samples)
