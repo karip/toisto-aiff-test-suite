@@ -16,18 +16,18 @@ compiling before running them).
     clang++ ... # see audiotoolbox-tester.mm for compilation instructions
     cd ..
     python3 runner.py tools/audiotoolbox-tester
-    # 100 passed, 14 failed.
+    # Total 116: 102 passed, 14 failed.
 
     # NOTE: install tinytag to test id3 tags
     python3 runner.py tools/python3-aiff-tester.py
-    # 69 passed, 45 failed.
+    # Total 116: 71 passed, 45 failed.
 
     cd tools/aiff-rs-tester
     cargo build
     cd ../..
     python3 runner.py tools/aiff-rs-tester/target/debug/aiff-rs-tester      # mac/linux
     python3 runner.py tools\aiff-rs-tester\target\debug\aiff-rs-tester.exe  # windows
-    # 50 passed, 64 failed.
+    # Total 116: 36 passed, 80 failed.
 
 [The results for macOS 13.6 AudioToolBox API](result-audiotoolbox-tester.md)
 running audiotoolbox-tester.
