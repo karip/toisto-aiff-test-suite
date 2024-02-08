@@ -142,6 +142,7 @@ filenames.sort()
 
 totalcount = 0
 count = {
+    "ok": 0,
     "fail": 0,
     "ignore": 0,
     "invalid": 0
@@ -255,6 +256,7 @@ for test_filename in filenames:
             count[testref["result"]] += 1
         else:
             print_verbose(args["verbose"], "OK  : "+test_filename)
+            count["ok"] += 1
 
     if len(cmderror) > 0:
         print(cmderror.decode("utf-8").strip())
@@ -269,7 +271,7 @@ for test_filename in filenames:
 # print totals
 
 print_verbose(args["verbose"], "")
-print("Total " + str(totalcount) + ": " + str(totalcount-count["fail"]) +  " passed, " +
+print("Total " + str(totalcount) + ": " + str(count["ok"]) +  " passed, " +
     str(count["fail"]) +  " failed, " + str(count["invalid"]) +  " invalid, " +
     str(count["ignore"]) +  " ignored.")
 
