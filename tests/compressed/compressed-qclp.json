@@ -9,7 +9,7 @@
     "sampleRate": 8000,
     "channels": 1,
     "codec": "Qclp",
-    "sampleSize": 0,
+    "sampleSize": 16,
     "samplesPerChannel": 960,
     "tolerance": 4,
     "startSamples": [

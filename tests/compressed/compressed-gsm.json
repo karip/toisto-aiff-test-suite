@@ -9,7 +9,7 @@
     "sampleRate": 44100,
     "channels": 1,
     "codec": "GSM ",
-    "sampleSize": 0,
+    "sampleSize": 16,
     "samplesPerChannel": 4480,
     "startSamples": [
         [ 0, 0, 4608, 4120, 3704, 7912, 7080, 6360, -26616, -23792, -21392, -23736, -21336, -19968, -22712, -20888,

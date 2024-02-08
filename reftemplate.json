@@ -7,6 +7,7 @@
         "platform": "macOS 12.4",
         "command": "commandlinetoolname -flags output.aiff"
     },
+    "result": "ignore|invalid",
     "format": "aiff|aiff-c",
     "sampleRate": 44100,
     "channels": 2,

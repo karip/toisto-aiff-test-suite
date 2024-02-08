@@ -10,7 +10,7 @@
     "sampleRate": 44100,
     "channels": 1,
     "codec": "G722",
-    "sampleSize": 0,
+    "sampleSize": 16,
     "samplesPerChannel": 4412,
     "startSamples": [
         [ 10, 11, 10, 11, 10, 11, 10, 10, -1, -31, -94, -230, -523, -1154, -2511, -5421,

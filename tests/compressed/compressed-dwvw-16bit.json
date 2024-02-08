@@ -9,7 +9,7 @@
     "sampleRate": 44100,
     "channels": 1,
     "codec": "DWVW",
-    "sampleSize": 0,
+    "sampleSize": 16,
     "samplesPerChannel": 4411,
     "startSamples": [
         [ 9, 12, 8, 11, 10, 9, 11, 10, -32767, -32115, -31458, -30808, -30151, -29501, -28843, -28193,

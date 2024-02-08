@@ -9,7 +9,7 @@
     "sampleRate": 44100,
     "channels": 1,
     "codec": "ima4",
-    "sampleSize": 0,
+    "sampleSize": 16,
     "samplesPerChannel": 4416,
     "startSamples": [
         [ 10, 11, 10, 11, 10, 11, 10, 10, -1, -31, -94, -230, -523, -1154, -2511, -5421,

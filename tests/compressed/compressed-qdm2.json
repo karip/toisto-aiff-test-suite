@@ -9,7 +9,7 @@
     "sampleRate": 44100,
     "channels": 1,
     "codec": "QDM2",
-    "sampleSize": 0,
+    "sampleSize": 16,
     "samplesPerChannel": 24576,
     "startSamples": [
         [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,

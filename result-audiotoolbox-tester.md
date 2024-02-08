@@ -190,5 +190,65 @@ FAIL: tests/exported/quicktime5-ulaw.aifc
 * ERROR: Can't set app format
  - process returned non-zero exit status: 255
 
-Total 116: 99 passed, 17 failed, 0 invalid, 0 ignored.
+(FAIL): tests/invalid/invalid-aifc-no-comm.aifc
+* ERROR: can't open file: tests/invalid/invalid-aifc-no-comm.aifc (dta?)
+ - process returned non-zero exit status: 255
+
+(FAIL): tests/invalid/invalid-aiff-no-comm.aiff
+* ERROR: can't open file: tests/invalid/invalid-aiff-no-comm.aiff (dta?)
+ - process returned non-zero exit status: 255
+
+(FAIL): tests/invalid/invalid-channels-0.aiff
+* ERROR: can't open file: tests/invalid/invalid-channels-0.aiff (fmt?)
+ - process returned non-zero exit status: 255
+
+(FAIL): tests/invalid/invalid-chunk-comm-short.aifc
+* ERROR: can't open file: tests/invalid/invalid-chunk-comm-short.aifc (fmt?)
+ - process returned non-zero exit status: 255
+
+(OK): tests/invalid/invalid-chunk-id.aiff
+
+(FAIL): tests/invalid/invalid-compression-type.aifc
+* ERROR: can't open file: tests/invalid/invalid-compression-type.aifc (fmt?)
+ - process returned non-zero exit status: 255
+
+(OK): tests/invalid/invalid-double-comm-ssnd.aiff
+(OK): tests/invalid/invalid-extra-garbage-at-end.aiff
+(OK): tests/invalid/invalid-file-too-short.aiff
+(OK): tests/invalid/invalid-fver-bad-value.aifc
+(OK): tests/invalid/invalid-no-fver.aifc
+
+(FAIL): tests/invalid/invalid-samplerate-0.aiff
+* ERROR: can't open file: tests/invalid/invalid-samplerate-0.aiff (fmt?)
+ - process returned non-zero exit status: 255
+
+(FAIL): tests/invalid/invalid-samplerate-inf.aiff
+* ERROR: can't open file: tests/invalid/invalid-samplerate-inf.aiff (fmt?)
+ - process returned non-zero exit status: 255
+
+(FAIL): tests/invalid/invalid-samplerate-nan.aiff
+* ERROR: can't open file: tests/invalid/invalid-samplerate-nan.aiff (fmt?)
+ - process returned non-zero exit status: 255
+
+(FAIL): tests/invalid/invalid-samplesize-0.aiff
+* ERROR: can't open file: tests/invalid/invalid-samplesize-0.aiff (fmt?)
+ - process returned non-zero exit status: 255
+
+(FAIL): tests/invalid/invalid-samplesize-33.aiff
+* ERROR: Can't set app format
+ - process returned non-zero exit status: 255
+
+(FAIL): tests/invalid/invalid-ssnd-large-size.aiff
+ - values differ for "samplesPerChannel", got: '65527', expected: '4411'
+ - values differ for "endSamples", channel 0, index 0, got: 0, expected: 33
+
+(OK): tests/invalid/unspecified-chunk-anno-non-ascii.aiff
+(OK): tests/invalid/unspecified-chunk-auth-non-ascii.aiff
+(OK): tests/invalid/unspecified-chunk-comments-non-ascii.aiff
+(OK): tests/invalid/unspecified-chunk-copy-non-ascii.aiff
+(OK): tests/invalid/unspecified-chunk-markers-non-ascii.aiff
+(OK): tests/invalid/unspecified-chunk-name-non-ascii.aiff
+
+Total 139: 99 passed, 17 failed, 23 invalid, 0 ignored.
+
 ~~~

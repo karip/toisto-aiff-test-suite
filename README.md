@@ -14,15 +14,14 @@ python aifc module. AudioToolBox requires building its tester before running it.
     cd tools
     clang++ ... # see audiotoolbox-tester.mm for compilation instructions
     cd ..
-    python3 toisto-runner.py tools/audiotoolbox-tester
-    # Total 116: 99 passed, 17 failed, 0 invalid, 0 ignored.
+    python3 toisto-runner.py -v tools/audiotoolbox-tester
+    # Total 139: 99 passed, 17 failed, 23 invalid, 0 ignored.
 
     # NOTE: install tinytag to test id3 tags
-    python3 toisto-runner.py tools/python3-aiff-tester.py
-    # Total 116: 66 passed, 50 failed, 0 invalid, 0 ignored.
+    python3 toisto-runner.py -v tools/python3-aiff-tester.py
+    # Total 139: 71 passed, 45 failed, 23 invalid, 0 ignored.
 
-[The results for macOS 13.6 AudioToolBox API](result-audiotoolbox-tester.md)
-running audiotoolbox-tester.
+[The results for AudioToolBox API](result-audiotoolbox-tester.md) running audiotoolbox-tester.
 
 ## Test cases
 
@@ -53,12 +52,17 @@ the audio file. The properties in the json file are:
    - `version` - version of the software
    - `platform` - platform used to run the software ("macOS 12.4" / "Windows 7" ..)
    - `command` - command line tool and its arguments used to create the file
+
+ - `result` - the test is a normal test if this is missing, `ignore` to ignore the test,
+              `invalid` if the test file is an invalid file
+ - `format` - format of the file: `aiff` or `aifc`
  - `sampleRate` - sample rate
  - `channels` - number of channels
  - `codec` - the compression type or type of uncompressed pcm sample data:
     `pcm_bei`=signed big-endian integer, `pcm_lei`=signed little-endian integer,
     `pcm_beu`=unsigned big-endian integer, `pcm_bef`=signed big-endian floating point
- - `sampleSize` - the sample size in bits (1-31), relevant for uncompressed sample data
+ - `sampleSize` - for uncompressed encodings, the sample size in bits 0-32 or 64, and
+                  for compressed encodings, the decoded sample size (0 for variable sample size)
  - `markers` - a list of markers (the MARK chunk)
    - `id` - id of the marker
    - `position` - position of the marker
@@ -91,38 +95,22 @@ See [reftemplate.json](reftemplate.json) for examples for all the fields.
 
 toisto-runner.py will compare each of these fields (except testinfo) against
 the values returned by the command. If the fields match, the test passes.
-If the command returns "-unsupported-", then reading the value is not
+If the command returns "-unsupported-", it means that the field is not
 supported by the command and it won't affect the result of the test.
 
 ## Reference sample data
 
 The `startSamples` and `endSamples` properties in the json file contain samples
-for each channel. The range of values depends on the codec:
+for each channel. The range of values depends on `sampleSize`:
 
-| Codec      |           Range           | Name                                                   |
-| ---------- | :-----------------------: | ------------------------------------------------------ |
-| bei 1..8   |        [-128, 127]        | Uncompressed 1..8-bit signed integer                   |
-| bei 9..16  |      [-32768, 32767]      | Uncompressed 9..16-bit signed integer                  |
-| bei 17..24 |    [-8388608, 8388607]    | Uncompressed 17..24-bit signed integer                 |
-| bei 25..32 | [-2147483648, 2147483647] | Uncompressed 25..32-bit signed integer                 |
-| lei 16     |      [-32768, 32767]      | Uncompressed 16-bit signed integer (little endian)     |
-| lei 32     | [-2147483648, 2147483647] | Uncompressed 32-bit signed integer (little endian)     |
-| bef 32     |        [-1.0, 1.0]        | Uncompressed 32-bit floating point                     |
-| bef 64     |        [-1.0, 1.0]        | Uncompressed 64-bit floating point                     |
-| beu 8      |         [0, 255]          | Uncompressed 8-bit unsigned integer                    |
-| ulaw       |      [-32768, 32767]      | µLaw 2:1                                               |
-| alaw       |      [-32768, 32767]      | ALaw 2:1                                               |
-| ima4       |      [-32768, 32767]      | Apple IMA 4:1                                          |
-| Qclp       |      [-32768, 32767]      | Qualcomm PureVoice                                     |
-| QDMC       |      [-32768, 32767]      | QDesign Music                                          |
-| QDM2       |      [-32768, 32767]      | QDesign Music 2                                        |
-| MAC3       |      [-32768, 32767]      | MACE 3:1                                               |
-| MAC6       |      [-32768, 32767]      | MACE 6:1                                               |
-| GSM        |      [-32768, 32767]      | GSM 6.10 (supported by Audacity)                       |
-| ULAW       |      [-32768, 32767]      | µLaw 2:1 uppercase (supported by Aucadity and Python)  |
-| ALAW       |      [-32768, 32767]      | ALaw 2:1 uppercase (supported by Aucadity and Python)  |
-| G722       |      [-32768, 32767]      | G7.22 (ADPCM) (supported by Python)                    |
-| DVWV       |  signed 16/24 bit range   | Delta With Variable Word Width (supported by Audacity) |
+| Sample size |                Range                |
+| :---------: | :---------------------------------: |
+|    1..8     |             [-128, 127]             |
+|    9..16    |           [-32768, 32767]           |
+|   17..24    |         [-8388608, 8388607]         |
+|   25..31    |      [-2147483648, 2147483647]      |
+|     32      | [-2147483648, 2147483647] or floats |
+|     64      |               floats                |
 
 ## Other test files
 

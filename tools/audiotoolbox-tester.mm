@@ -414,9 +414,18 @@ int main(int argc, const char * argv[]) {
         codec.push_back((char)((audesc.mFormatID >> 0) & 255));
     }
     int sampleSize = audesc.mBitsPerChannel;
-    if (audesc.mFormatID == kAudioFormatULaw || audesc.mFormatID == kAudioFormatALaw) {
+    if (audesc.mFormatID == kAudioFormatULaw
+        || audesc.mFormatID == kAudioFormatALaw
+        || audesc.mFormatID == kAudioFormatAppleIMA4
+        || audesc.mFormatID == kAudioFormatQUALCOMM
+        || audesc.mFormatID == kAudioFormatQDesign
+        || audesc.mFormatID == kAudioFormatQDesign2
+        || audesc.mFormatID == kAudioFormatMACE3
+        || audesc.mFormatID == kAudioFormatMACE6
+        || audesc.mFormatID == 0x6167736d) { // "agsm"
         sampleSize = 16;
     }
+
     int channels = audesc.mChannelsPerFrame;
 
     printf("{\n");

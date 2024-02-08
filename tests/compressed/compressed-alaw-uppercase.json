@@ -10,7 +10,7 @@
     "sampleRate": 44100,
     "channels": 1,
     "codec": "ALAW",
-    "sampleSize": 0,
+    "sampleSize": 16,
     "samplesPerChannel": 4410,
     "startSamples": [
         [ 8, 8, 8, 8, 8, 8, 8, 8, -32256, -32256, -31232, -31232, -30208, -29184, -29184, -28160,

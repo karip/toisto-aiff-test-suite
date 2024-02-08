@@ -9,7 +9,7 @@
     "sampleRate": 44100,
     "channels": 2,
     "codec": "MAC3",
-    "sampleSize": 0,
+    "sampleSize": 16,
     "samplesPerChannel": 4416,
     "startSamples": [
         [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
