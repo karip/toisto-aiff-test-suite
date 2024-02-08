@@ -1,8 +1,9 @@
 {
     "testinfo": {
-        "description": "Invalid chunk ID containing non-ascii characters",
-        "notes": "QuickTime Player 10.5 can play this file."
+        "description": "AIFF file with two COMM chunks and two SSND chunks",
+        "notes": "QuickTime Player 10.5 plays the last COMM chunk and the last SSND chunk."
     },
+    "result": "invalid",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,

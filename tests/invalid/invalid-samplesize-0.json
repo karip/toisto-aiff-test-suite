@@ -1,13 +1,14 @@
 {
     "testinfo": {
-        "description": "Sample size 33 bits",
+        "description": "Sample size zero bits",
         "notes": "QuickTime Player 10.5 cannot play this file."
     },
+    "result": "invalid",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,
     "codec": "pcm_bei",
-    "sampleSize": 33,
+    "sampleSize": 0,
     "samplesPerChannel": 0,
     "startSamples": [
         [  ]

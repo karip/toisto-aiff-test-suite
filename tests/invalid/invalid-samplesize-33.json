@@ -1,12 +1,15 @@
 {
     "testinfo": {
-        "description": "The COMM chunk too short without the compression type",
+        "description": "Sample size 33 bits",
         "notes": "QuickTime Player 10.5 cannot play this file."
     },
-    "format": "aiff-c",
+    "result": "invalid",
+    "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,
-    "sampleSize": 8,
+    "codec": "pcm_bei",
+    "sampleSize": 33,
+    "samplesPerChannel": 0,
     "startSamples": [
         [  ]
     ],

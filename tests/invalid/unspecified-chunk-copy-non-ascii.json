@@ -1,13 +1,15 @@
 {
     "testinfo": {
-        "description": "No FVER chunk",
-        "notes": "QuickTime Player 10.5 can play this file."
+        "description": "Non-ascii chars in (c) are undefined in the AIFF spec",
+        "notes": "Audio Toolbox API seems to decode non-ascii chars as ISO 8859-1. Audacity shows dots for them."
     },
-    "format": "aiff-c",
+    "result": "invalid",
+    "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
+    "(c)": "Xutf8ð\u009f\u0098\u0084ISO¾¢x",
     "samplesPerChannel": 4411,
     "startSamples": [
         [ 10, 10, 10, 10, 10, 10, 10, 10, -128, -125, -123, -120, -118, -115, -113, -110,

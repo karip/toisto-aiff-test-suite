@@ -1,14 +1,13 @@
 {
     "testinfo": {
-        "description": "Zero channels",
+        "description": "The COMM chunk too short without the compression type",
         "notes": "QuickTime Player 10.5 cannot play this file."
     },
-    "format": "aiff",
+    "result": "invalid",
+    "format": "aiff-c",
     "sampleRate": 44100,
-    "channels": 0,
-    "codec": "pcm_bei",
+    "channels": 1,
     "sampleSize": 8,
-    "samplesPerChannel": 0,
     "startSamples": [
         [  ]
     ],

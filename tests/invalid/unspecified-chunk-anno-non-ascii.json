@@ -1,13 +1,15 @@
 {
     "testinfo": {
-        "description": "AIFF file with two COMM chunks and two SSND chunks",
-        "notes": "QuickTime Player 10.5 plays the last COMM chunk and the last SSND chunk."
+        "description": "Non-ascii chars in ANNO are undefined in the AIFF spec",
+        "notes": "Audio Toolbox API seems to decode non-ascii chars as ISO 8859-1."
     },
+    "result": "invalid",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
+    "anno": [ "Xutf8ð\u009f\u0098\u0084ISO¾¢x" ],
     "samplesPerChannel": 4411,
     "startSamples": [
         [ 10, 10, 10, 10, 10, 10, 10, 10, -128, -125, -123, -120, -118, -115, -113, -110,

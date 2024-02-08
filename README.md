@@ -33,13 +33,12 @@ audio files. The folder contains subfolders:
  - `aiff` - contains AIFF test files
  - `compressed` - contains AIFF-C test files with compressed sample data
  - `exported` - contains test files exported from various apps
+ - `invalid` - contains invalid AIFF and AIFF-C files
 
-The `invalid` folder contains invalid AIFF files, which are not part of
-the tests. They can be used to check how AIFF readers react to invalid files.
-The readers may or may not read them, but hopefully they won't crash.
-Run toisto-runner.py with `invalid` as the input folder:
-
-    python3 toisto-runner.py tools/audiotoolbox-tester -i invalid
+The `invalid` folder contains invalid files. The readers may or may not read them,
+but hopefully they won't crash reading them. The unspecified files contain
+non-ASCII characters in textual fields, which are not allowed by the spec.
+However, macOS Audio Toolbox API seems to read them as ISO 8859-1 or UTF-8.
 
 ## Expected results (json files)
 

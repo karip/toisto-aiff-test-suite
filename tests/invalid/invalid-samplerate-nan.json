@@ -1,10 +1,11 @@
 {
     "testinfo": {
-        "description": "Sample rate zero",
+        "description": "Sample rate NaN",
         "notes": "QuickTime Player 10.5 cannot play this file."
     },
+    "result": "invalid",
     "format": "aiff",
-    "sampleRate": 0,
+    "sampleRate": "nan",
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
