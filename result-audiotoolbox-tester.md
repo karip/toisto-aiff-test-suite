@@ -2,7 +2,7 @@
 # Results for running audiotoolbox-tester on macOS 13.6
 
 ~~~
-> python3 runner.py tools/audiotoolbox-tester
+> python3 toisto-runner.py tools/audiotoolbox-tester
 
 Testing command: tools/audiotoolbox-tester
 OK  : tests/aifc/aifc-channels-2-fl32.aifc
@@ -184,7 +184,7 @@ Total 116: 102 passed, 14 failed.
 ~~~
 
 ~~~
-> python3 runner.py tools/audiotoolbox-tester -i invalid
+> python3 toisto-runner.py tools/audiotoolbox-tester -i invalid
 
 Testing command: tools/audiotoolbox-tester
 

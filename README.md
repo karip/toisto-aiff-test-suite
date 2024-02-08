@@ -5,7 +5,7 @@ This is an unofficial AIFF / AIFF-C audio file test suite.
 
 ## Usage
 
-The `runner.py` script runs the test suite for the command given to it.
+The `toisto-runner.py` script runs the test suite for the command given to it.
 
 Here's examples running the test suite for macOS AudioToolBox API,
 python aifc module or Rust aiff-rs. (AudioToolBox and aiff-rs require
@@ -15,18 +15,18 @@ compiling before running them).
     cd tools
     clang++ ... # see audiotoolbox-tester.mm for compilation instructions
     cd ..
-    python3 runner.py tools/audiotoolbox-tester
+    python3 toisto-runner.py tools/audiotoolbox-tester
     # Total 116: 102 passed, 14 failed.
 
     # NOTE: install tinytag to test id3 tags
-    python3 runner.py tools/python3-aiff-tester.py
+    python3 toisto-runner.py tools/python3-aiff-tester.py
     # Total 116: 71 passed, 45 failed.
 
     cd tools/aiff-rs-tester
     cargo build
     cd ../..
-    python3 runner.py tools/aiff-rs-tester/target/debug/aiff-rs-tester      # mac/linux
-    python3 runner.py tools\aiff-rs-tester\target\debug\aiff-rs-tester.exe  # windows
+    python3 toisto-runner.py tools/aiff-rs-tester/target/debug/aiff-rs-tester      # mac/linux
+    python3 toisto-runner.py tools\aiff-rs-tester\target\debug\aiff-rs-tester.exe  # windows
     # Total 116: 36 passed, 80 failed.
 
 [The results for macOS 13.6 AudioToolBox API](result-audiotoolbox-tester.md)
@@ -45,9 +45,9 @@ audio files. The folder contains subfolders:
 The `invalid` folder contains invalid AIFF files, which are not part of
 the tests. They can be used to check how AIFF readers react to invalid files.
 The readers may or may not read them, but hopefully they won't crash.
-Run runner.py with `invalid` as the input folder:
+Run toisto-runner.py with `invalid` as the input folder:
 
-    python3 runner.py tools/audiotoolbox-tester -i invalid
+    python3 toisto-runner.py tools/audiotoolbox-tester -i invalid
 
 ## Expected results (json files)
 
@@ -98,7 +98,7 @@ the audio file. The properties in the json file are:
 
 See [reftemplate.json](reftemplate.json) for examples for all the fields.
 
-runner.py will compare each of these fields (except testinfo) against
+toisto-runner.py will compare each of these fields (except testinfo) against
 the values returned by the command. If the fields match, the test passes.
 If the command returns "-unsupported-", then reading the value is not
 supported by the command and it won't affect the result of the test.
