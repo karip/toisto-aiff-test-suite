@@ -7,27 +7,19 @@ This is an unofficial AIFF / AIFF-C audio file test suite.
 
 The `toisto-runner.py` script runs the test suite for the command given to it.
 
-Here's examples running the test suite for macOS AudioToolBox API,
-python aifc module or Rust aiff-rs. (AudioToolBox and aiff-rs require
-compiling before running them).
+Here's examples running the test suite for macOS AudioToolBox API or
+python aifc module. AudioToolBox requires building its tester before running it.
 
     # for macOS
     cd tools
     clang++ ... # see audiotoolbox-tester.mm for compilation instructions
     cd ..
     python3 toisto-runner.py tools/audiotoolbox-tester
-    # Total 116: 102 passed, 14 failed.
+    # Total 116: 99 passed, 17 failed, 0 invalid, 0 ignored.
 
     # NOTE: install tinytag to test id3 tags
     python3 toisto-runner.py tools/python3-aiff-tester.py
-    # Total 116: 71 passed, 45 failed.
-
-    cd tools/aiff-rs-tester
-    cargo build
-    cd ../..
-    python3 toisto-runner.py tools/aiff-rs-tester/target/debug/aiff-rs-tester      # mac/linux
-    python3 toisto-runner.py tools\aiff-rs-tester\target\debug\aiff-rs-tester.exe  # windows
-    # Total 116: 36 passed, 80 failed.
+    # Total 116: 66 passed, 50 failed, 0 invalid, 0 ignored.
 
 [The results for macOS 13.6 AudioToolBox API](result-audiotoolbox-tester.md)
 running audiotoolbox-tester.
