@@ -1,8 +1,8 @@
 
-# Results for running audiotoolbox-tester on macOS 13.6
+# Results for running audiotoolbox-tester on macOS 14.3
 
 ~~~
-> python3 toisto-runner.py tools/audiotoolbox-tester
+> python3 toisto-runner.py -v tools/audiotoolbox-tester
 
 Testing command: tools/audiotoolbox-tester
 OK  : tests/aifc/aifc-channels-2-fl32.aifc
@@ -142,9 +142,18 @@ FAIL: tests/compressed/compressed-mac6.aifc
 * ERROR: can't open file: tests/compressed/compressed-mac6.aifc (fmt?)
  - process returned non-zero exit status: 255
 
-OK  : tests/compressed/compressed-qclp.aifc
-OK  : tests/compressed/compressed-qdm2.aifc
-OK  : tests/compressed/compressed-qdmc.aifc
+FAIL: tests/compressed/compressed-qclp.aifc
+* ERROR: can't open file: tests/compressed/compressed-qclp.aifc (fmt?)
+ - process returned non-zero exit status: 255
+
+FAIL: tests/compressed/compressed-qdm2.aifc
+* ERROR: can't open file: tests/compressed/compressed-qdm2.aifc (fmt?)
+ - process returned non-zero exit status: 255
+
+FAIL: tests/compressed/compressed-qdmc.aifc
+* ERROR: can't open file: tests/compressed/compressed-qdmc.aifc (fmt?)
+ - process returned non-zero exit status: 255
+
 OK  : tests/compressed/compressed-ulaw-ch2.aifc
 
 FAIL: tests/compressed/compressed-ulaw-uppercase.aifc
@@ -180,70 +189,6 @@ OK  : tests/exported/quicktime5-samplesize-8.aiff
 FAIL: tests/exported/quicktime5-ulaw.aifc
 * ERROR: Can't set app format
  - process returned non-zero exit status: 255
-Total 116: 102 passed, 14 failed.
-~~~
 
-~~~
-> python3 toisto-runner.py tools/audiotoolbox-tester -i invalid
-
-Testing command: tools/audiotoolbox-tester
-
-FAIL: invalid/invalid-aifc-no-comm.aifc
-* ERROR: can't open file: invalid/invalid-aifc-no-comm.aifc (dta?)
- - process returned non-zero exit status: 255
-
-FAIL: invalid/invalid-aiff-no-comm.aiff
-* ERROR: can't open file: invalid/invalid-aiff-no-comm.aiff (dta?)
- - process returned non-zero exit status: 255
-
-FAIL: invalid/invalid-channels-0.aiff
-* ERROR: can't open file: invalid/invalid-channels-0.aiff (fmt?)
- - process returned non-zero exit status: 255
-
-FAIL: invalid/invalid-chunk-comm-short.aifc
-* ERROR: can't open file: invalid/invalid-chunk-comm-short.aifc (fmt?)
- - process returned non-zero exit status: 255
-
-OK  : invalid/invalid-chunk-id.aiff
-
-FAIL: invalid/invalid-compression-type.aifc
-* ERROR: can't open file: invalid/invalid-compression-type.aifc (fmt?)
- - process returned non-zero exit status: 255
-
-OK  : invalid/invalid-extra-garbage-at-end.aiff
-OK  : invalid/invalid-file-too-short.aiff
-OK  : invalid/invalid-fver-bad-value.aifc
-OK  : invalid/invalid-no-fver.aifc
-
-FAIL: invalid/invalid-samplerate-0.aiff
-* ERROR: can't open file: invalid/invalid-samplerate-0.aiff (fmt?)
- - process returned non-zero exit status: 255
-
-FAIL: invalid/invalid-samplerate-inf.aiff
-* ERROR: can't open file: invalid/invalid-samplerate-inf.aiff (fmt?)
- - process returned non-zero exit status: 255
-
-FAIL: invalid/invalid-samplerate-nan.aiff
-* ERROR: can't open file: invalid/invalid-samplerate-nan.aiff (fmt?)
- - process returned non-zero exit status: 255
-
-FAIL: invalid/invalid-samplesize-0.aiff
-* ERROR: can't open file: invalid/invalid-samplesize-0.aiff (fmt?)
- - process returned non-zero exit status: 255
-
-FAIL: invalid/invalid-samplesize-33.aiff
-* ERROR: Can't set app format
- - process returned non-zero exit status: 255
-
-FAIL: invalid/invalid-ssnd-large-size.aiff
- - values differ for "samplesPerChannel", got: '65527', expected: '4411'
- - values differ for "endSamples", channel 0, index 0, got: 0, expected: 33
-
-OK  : invalid/unspecified-chunk-anno-non-ascii.aiff
-OK  : invalid/unspecified-chunk-auth-non-ascii.aiff
-OK  : invalid/unspecified-chunk-comments-non-ascii.aiff
-OK  : invalid/unspecified-chunk-copy-non-ascii.aiff
-OK  : invalid/unspecified-chunk-markers-non-ascii.aiff
-OK  : invalid/unspecified-chunk-name-non-ascii.aiff
-Total 22: 11 passed, 11 failed.
+Total 116: 99 passed, 17 failed, 0 invalid, 0 ignored.
 ~~~

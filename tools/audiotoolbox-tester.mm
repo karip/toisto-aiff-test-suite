@@ -413,7 +413,10 @@ int main(int argc, const char * argv[]) {
         codec.push_back((char)((audesc.mFormatID >> 8) & 255));
         codec.push_back((char)((audesc.mFormatID >> 0) & 255));
     }
-
+    int sampleSize = audesc.mBitsPerChannel;
+    if (audesc.mFormatID == kAudioFormatULaw || audesc.mFormatID == kAudioFormatALaw) {
+        sampleSize = 16;
+    }
     int channels = audesc.mChannelsPerFrame;
 
     printf("{\n");
@@ -421,7 +424,7 @@ int main(int argc, const char * argv[]) {
     printf("    \"sampleRate\": %g,\n", audesc.mSampleRate);
     printf("    \"channels\": %d,\n", (int)audesc.mChannelsPerFrame);
     printf("    \"codec\": \"%s\",\n", codec.c_str());
-    printf("    \"sampleSize\": %d,\n", (int)audesc.mBitsPerChannel);
+    printf("    \"sampleSize\": %d,\n", (int)sampleSize);
 
     // read markers
     UInt32 msize = getPropertySize(fileID, kAudioFilePropertyMarkerList);

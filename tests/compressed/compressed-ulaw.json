@@ -10,7 +10,7 @@
     "sampleRate": 44100,
     "channels": 1,
     "codec": "ulaw",
-    "sampleSize": 0,
+    "sampleSize": 16,
     "samplesPerChannel": 4411,
     "startSamples": [
         [ 8, 8, 8, 8, 8, 8, 8, 8, -30076, -30076, -31100, -31100, -30076, -29052, -29052, -28028,
