@@ -1,7 +1,7 @@
 //
 // audiotoolbox-writer.mm
 //
-// Writes AIFF files using the Audio Toolbox API on macOS.
+// Writes audio files using the Audio Toolbox API on macOS.
 //
 // compile: clang++ audiotoolbox-writer.mm -o audiotoolbox-writer -framework Foundation -framework AudioToolbox
 //

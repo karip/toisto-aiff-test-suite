@@ -1,10 +1,10 @@
 
-# Results for running audiotoolbox-tester on macOS 14.3
+# Results for running audiotoolbox-aiff-tester on macOS 14.3
 
 ~~~
-> python3 toisto-runner.py -v tools/audiotoolbox-tester
+> python3 toisto-runner.py -v tools/audiotoolbox-aiff-tester
 
-Testing command: tools/audiotoolbox-tester
+Testing command: tools/audiotoolbox-aiff-tester
 OK  : tests/aifc/aifc-channels-2-fl32.aifc
 OK  : tests/aifc/aifc-channels-4.aifc
 OK  : tests/aifc/aifc-chunk-fllr.aifc

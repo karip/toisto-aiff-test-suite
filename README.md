@@ -12,16 +12,16 @@ python aifc module. AudioToolBox requires building its tester before running it.
 
     # for macOS
     cd tools
-    clang++ ... # see audiotoolbox-tester.mm for compilation instructions
+    clang++ ... # see audiotoolbox-aiff-tester.mm for compilation instructions
     cd ..
-    python3 toisto-runner.py -v tools/audiotoolbox-tester
+    python3 toisto-runner.py -v tools/audiotoolbox-aiff-tester
     # Total 139: 99 passed, 17 failed, 23 invalid, 0 ignored.
 
     # NOTE: install tinytag to test id3 tags
     python3 toisto-runner.py -v tools/python3-aiff-tester.py
     # Total 139: 71 passed, 45 failed, 23 invalid, 0 ignored.
 
-[The results for AudioToolBox API](result-audiotoolbox-tester.md) running audiotoolbox-tester.
+[The results for AudioToolBox API](result-audiotoolbox-tester.md) running audiotoolbox-aiff-tester.
 
 ## Test cases
 

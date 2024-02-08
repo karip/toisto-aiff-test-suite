@@ -1,9 +1,9 @@
 //
-// audiotoolbox-tester.mm
+// audiotoolbox-aiff-tester.mm
 //
 // Tests how Audio Toolbox API reads AIFF files on macOS.
 //
-// compile: clang++ audiotoolbox-tester.mm -o audiotoolbox-tester -framework Foundation -framework AudioToolbox
+// compile: clang++ audiotoolbox-aiff-tester.mm -o audiotoolbox-aiff-tester -framework Foundation -framework AudioToolbox
 //
 
 #import <Foundation/Foundation.h>
@@ -324,7 +324,7 @@ void printSamples(int channels, size_t start, size_t end,
 
 int main(int argc, const char * argv[]) {
     if (argc < 2) {
-        printf("Usage: audiotoolbox-tester audiofile.aiff\n");
+        printf("Usage: audiotoolbox-aiff-tester audiofile.aiff\n");
         exit(-1);
     }
 
