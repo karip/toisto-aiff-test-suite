@@ -1,6 +1,6 @@
 {
     "testinfo": {
-        "description": "μ-Law compressed audio file",
+        "description": "μ-Law 2:1 compressed audio file",
         "notes": "The compression name is encoded as UTF-8",
         "software": "Audio Toolbox API",
         "platform": "macOS 12.4",

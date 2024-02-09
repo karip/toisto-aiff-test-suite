@@ -1,6 +1,6 @@
 {
     "testinfo": {
-        "description": "Qclp compressed audio file",
+        "description": "Qclp (Qualcomm PureVoice) compressed audio file",
         "software": "Audio Toolbox API",
         "platform": "macOS 12.4",
         "command": "afconvert -d Qclp --no-filler tests/aiff/aiff-samplesize-16.aiff tests/compressed/compressed-qclp.aifc"

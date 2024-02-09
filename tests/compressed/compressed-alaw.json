@@ -1,6 +1,6 @@
 {
     "testinfo": {
-        "description": "A-Law compressed audio file",
+        "description": "A-Law 2:1 compressed audio file",
         "software": "Audio Toolbox API",
         "platform": "macOS 12.4",
         "command": "tools/audiotoolbox-writer 44100 alaw 1 tests/compressed/compressed-alaw.aifc"

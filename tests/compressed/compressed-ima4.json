@@ -1,6 +1,6 @@
 {
     "testinfo": {
-        "description": "IMA4 compressed audio file",
+        "description": "IMA4 (Apple IMA 4:1) compressed audio file",
         "software": "Audio Toolbox API",
         "platform": "macOS 12.4",
         "command": "afconvert -d ima4 --no-filler tests/aiff/aiff-samplesize-16.aiff tests/compressed/compressed-ima4.aifc"

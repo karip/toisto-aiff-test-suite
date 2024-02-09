@@ -1,6 +1,6 @@
 {
     "testinfo": {
-        "description": "μ-Law compressed audio file with 2 channels",
+        "description": "μ-Law 2:1 compressed audio file with 2 channels",
         "software": "Audio Toolbox API",
         "platform": "macOS 12.4",
         "command": "tools/audiotoolbox-writer 44100 ulaw 2 tests/compressed/compressed-ulaw-ch2.aifc"

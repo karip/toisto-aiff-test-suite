@@ -1,6 +1,6 @@
 {
     "testinfo": {
-        "description": "MAC3 compressed audio file with 1 channel",
+        "description": "MAC3 (MACE 3:1) compressed audio file with 1 channel",
         "software": "Audio Toolbox API",
         "platform": "Mac OS X 10.6",
         "command": "tools/audiotoolbox-writer 44100 MAC3 1 tests/compressed/compressed-MAC3.aifc"

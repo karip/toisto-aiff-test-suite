@@ -1,6 +1,6 @@
 {
     "testinfo": {
-        "description": "Python3 written G722 compressed audio file",
+        "description": "Python3 written G722 (ADPCM) compressed audio file",
         "software": "python3",
         "version": "3.8.9",
         "platform": "macOS 12.4",

@@ -1,6 +1,6 @@
 {
     "testinfo": {
-        "description": "MAC6 compressed audio file",
+        "description": "MAC6 (MACE 6:1) compressed audio file",
         "software": "Audio Toolbox API",
         "platform": "Mac OS X 10.6",
         "command": "tools/audiotoolbox-writer 44100 MAC6 1 tests/compressed/compressed-MAC6.aifc"
