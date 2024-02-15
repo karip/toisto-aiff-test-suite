@@ -6,7 +6,7 @@
         "command": "tools/audiotoolbox-writer 2900000 bei8 1 -d10 tests/aiff/aiff-samplerate-2900000.aiff"
     },
     "format": "aiff",
-    "sampleRate": 2.9e+06,
+    "sampleRate": 2900000,
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
