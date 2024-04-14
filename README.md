@@ -7,21 +7,21 @@ This is an unofficial AIFF / AIFF-C audio file test suite.
 
 The `toisto-runner.py` script runs the test suite for the command given to it.
 
-Here's examples running the test suite for macOS AudioToolBox API or
-python aifc module. AudioToolBox requires building its tester before running it.
+Here's examples running the test suite for macOS Audio ToolBox framework or
+python aifc module. audiotoolbox-aiff-tester requires building it before running it.
 
     # for macOS
     cd tools
     clang++ ... # see audiotoolbox-aiff-tester.mm for compilation instructions
     cd ..
     python3 toisto-runner.py -v tools/audiotoolbox-aiff-tester
-    # Total 139: 99 passed, 17 failed, 23 invalid, 0 ignored.
+    # Total 142: 102 passed, 17 failed, 23 invalid, 0 ignored.
 
     # NOTE: install tinytag to test id3 tags
     python3 toisto-runner.py -v tools/python3-aiff-tester.py
-    # Total 139: 71 passed, 45 failed, 23 invalid, 0 ignored.
+    # Total 142: 74 passed, 45 failed, 23 invalid, 0 ignored.
 
-[The results for AudioToolBox API](result-audiotoolbox-tester.md) running audiotoolbox-aiff-tester.
+[The results for Audio ToolBox framework](result-audiotoolbox-tester.md) running audiotoolbox-aiff-tester.
 
 ## Test cases
 
@@ -37,7 +37,7 @@ audio files. The folder contains subfolders:
 The `invalid` folder contains invalid files. The readers may or may not read them,
 but hopefully they won't crash reading them. The unspecified files contain
 non-ASCII characters in textual fields, which are not allowed by the spec.
-However, macOS Audio Toolbox API seems to read them as ISO 8859-1 or UTF-8.
+However, macOS Audio Toolbox framework seems to read them as ISO 8859-1 or UTF-8.
 
 ## Expected results (json files)
 
@@ -125,6 +125,7 @@ for each channel. The range of values depends on `sampleSize`:
  - [wiki.multimedia.cx: QDesign Music Codec (QDMC / QDM2)](https://wiki.multimedia.cx/index.php/QDesign_Music_Codec)
  - [wiki.multimedia.cx: MAC3/MAC6](https://wiki.multimedia.cx/index.php/Apple_MACE)
  - [Apple comment about little-endian AIFF/AIFC files](https://lists.apple.com/archives/coreaudio-api/2009/Mar/msg00400.html)
+ - [macOS Audio Toolbox framework](https://developer.apple.com/documentation/audiotoolbox/)
  - [Python3 AIFC module](https://docs.python.org/3/library/aifc.html)
  - [MIDI system exclusive message / Master Volume message](https://www.recordingblogs.com/wiki/midi-master-volume-message)
 
