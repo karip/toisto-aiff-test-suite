@@ -1,7 +1,7 @@
 {
     "testinfo": {
         "description": "ffmpeg exported id3 tags",
-        "notes": "ffmpeg exports UTF-8 strings, but macOS Audio Toolbox framework reads them as ISO-8859-1.",
+        "notes": "ffmpeg exports UTF-8 strings, but macOS Audio Toolbox framework reads some of them as ISO-8859-1.",
         "software": "ffmpeg",
         "version": "4.4.2",
         "platform": "Ubuntu 22.04",
