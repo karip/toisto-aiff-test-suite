@@ -105,12 +105,12 @@ OK    : tests/aiff/aiff-samplesize-29.aiff
 OK    : tests/aiff/aiff-samplesize-32.aiff
 OK    : tests/aiff/aiff-samplesize-4.aiff
 OK    : tests/aiff/aiff-samplesize-8.aiff
+OK    : tests/compressed/compressed-alaw-ch1.aifc
+OK    : tests/compressed/compressed-alaw-ch2.aifc
 
 FAIL  : tests/compressed/compressed-alaw-uppercase.aifc
 * ERROR: can't open file: tests/compressed/compressed-alaw-uppercase.aifc (fmt?)
  - process returned non-zero exit status: 255
-
-OK    : tests/compressed/compressed-alaw.aifc
 
 FAIL  : tests/compressed/compressed-dwvw-16bit.aifc
 * ERROR: can't open file: tests/compressed/compressed-dwvw-16bit.aifc (fmt?)
@@ -120,47 +120,68 @@ FAIL  : tests/compressed/compressed-dwvw-24bit.aifc
 * ERROR: can't open file: tests/compressed/compressed-dwvw-24bit.aifc (fmt?)
  - process returned non-zero exit status: 255
 
-FAIL  : tests/compressed/compressed-g722.aifc
-* ERROR: can't open file: tests/compressed/compressed-g722.aifc (fmt?)
+FAIL  : tests/compressed/compressed-g722-ch1.aifc
+* ERROR: can't open file: tests/compressed/compressed-g722-ch1.aifc (fmt?)
+ - process returned non-zero exit status: 255
+
+FAIL  : tests/compressed/compressed-g722-ch2.aifc
+* ERROR: can't open file: tests/compressed/compressed-g722-ch2.aifc (fmt?)
+ - process returned non-zero exit status: 255
+
+FAIL  : tests/compressed/compressed-g722-ch3.aifc
+* ERROR: can't open file: tests/compressed/compressed-g722-ch3.aifc (fmt?)
  - process returned non-zero exit status: 255
 
 FAIL  : tests/compressed/compressed-gsm.aifc
 * ERROR: can't open file: tests/compressed/compressed-gsm.aifc (fmt?)
  - process returned non-zero exit status: 255
 
-OK    : tests/compressed/compressed-ima4.aifc
+OK    : tests/compressed/compressed-ima4-ch1.aifc
+OK    : tests/compressed/compressed-ima4-ch2.aifc
+
+FAIL  : tests/compressed/compressed-mac3-ch1.aifc
+* ERROR: can't open file: tests/compressed/compressed-mac3-ch1.aifc (fmt?)
+ - process returned non-zero exit status: 255
 
 FAIL  : tests/compressed/compressed-mac3-ch2.aifc
 * ERROR: can't open file: tests/compressed/compressed-mac3-ch2.aifc (fmt?)
  - process returned non-zero exit status: 255
 
-FAIL  : tests/compressed/compressed-mac3.aifc
-* ERROR: can't open file: tests/compressed/compressed-mac3.aifc (fmt?)
+FAIL  : tests/compressed/compressed-mac6-ch1.aifc
+* ERROR: can't open file: tests/compressed/compressed-mac6-ch1.aifc (fmt?)
  - process returned non-zero exit status: 255
 
-FAIL  : tests/compressed/compressed-mac6.aifc
-* ERROR: can't open file: tests/compressed/compressed-mac6.aifc (fmt?)
+FAIL  : tests/compressed/compressed-mac6-ch2.aifc
+* ERROR: can't open file: tests/compressed/compressed-mac6-ch2.aifc (fmt?)
  - process returned non-zero exit status: 255
 
 FAIL  : tests/compressed/compressed-qclp.aifc
 * ERROR: can't open file: tests/compressed/compressed-qclp.aifc (fmt?)
  - process returned non-zero exit status: 255
 
-FAIL  : tests/compressed/compressed-qdm2.aifc
-* ERROR: can't open file: tests/compressed/compressed-qdm2.aifc (fmt?)
+FAIL  : tests/compressed/compressed-qdm2-ch1.aifc
+* ERROR: can't open file: tests/compressed/compressed-qdm2-ch1.aifc (fmt?)
  - process returned non-zero exit status: 255
 
-FAIL  : tests/compressed/compressed-qdmc.aifc
-* ERROR: can't open file: tests/compressed/compressed-qdmc.aifc (fmt?)
+FAIL  : tests/compressed/compressed-qdm2-ch2.aifc
+* ERROR: can't open file: tests/compressed/compressed-qdm2-ch2.aifc (fmt?)
  - process returned non-zero exit status: 255
 
+FAIL  : tests/compressed/compressed-qdmc-ch1.aifc
+* ERROR: can't open file: tests/compressed/compressed-qdmc-ch1.aifc (fmt?)
+ - process returned non-zero exit status: 255
+
+FAIL  : tests/compressed/compressed-qdmc-ch2.aifc
+* ERROR: can't open file: tests/compressed/compressed-qdmc-ch2.aifc (fmt?)
+ - process returned non-zero exit status: 255
+
+OK    : tests/compressed/compressed-ulaw-ch1.aifc
 OK    : tests/compressed/compressed-ulaw-ch2.aifc
 
 FAIL  : tests/compressed/compressed-ulaw-uppercase.aifc
 * ERROR: can't open file: tests/compressed/compressed-ulaw-uppercase.aifc (fmt?)
  - process returned non-zero exit status: 255
 
-OK    : tests/compressed/compressed-ulaw.aifc
 OK    : tests/exported/audacity-i8-id3.aiff
 OK    : tests/exported/audacity-i8.aiff
 OK    : tests/exported/audacity-ima-adpcm.aifc
@@ -252,6 +273,6 @@ FAIL  : tests/exported/quicktime5-ulaw.aifc
 (OK)  : tests/invalid/unspecified-chunk-markers-non-ascii.aiff
 (OK)  : tests/invalid/unspecified-chunk-name-non-ascii.aiff
 
-Total 142: 102 passed, 17 failed, 23 invalid, 0 ignored.
+Total 149: 104 passed, 22 failed, 23 invalid, 0 ignored.
 
 ~~~

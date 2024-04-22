@@ -1,9 +1,9 @@
 {
     "testinfo": {
-        "description": "IMA4 (Apple IMA 4:1) compressed audio file",
+        "description": "IMA4 (Apple IMA 4:1) compressed audio file with 1 channel",
         "software": "Audio Toolbox API",
-        "platform": "macOS 12.4",
-        "command": "afconvert -d ima4 --no-filler tests/aiff/aiff-samplesize-16.aiff tests/compressed/compressed-ima4.aifc"
+        "platform": "macOS 12.2",
+        "command": "afconvert -d ima4 --no-filler tests/aiff/aiff-samplesize-16.aiff tests/compressed/compressed-ima4-ch1.aifc"
     },
     "format": "aiff-c",
     "sampleRate": 44100,

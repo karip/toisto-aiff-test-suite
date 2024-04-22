@@ -1,10 +1,10 @@
 {
     "testinfo": {
-        "description": "μ-Law 2:1 compressed audio file",
+        "description": "μ-Law 2:1 compressed audio file with 1 channel",
         "notes": "The compression name is encoded as UTF-8",
         "software": "Audio Toolbox API",
-        "platform": "macOS 12.4",
-        "command": "tools/audiotoolbox-writer 44100 ulaw 1 tests/compressed/compressed-ulaw.aifc"
+        "platform": "macOS 14.4",
+        "command": "tools/audiotoolbox-writer 44100 ulaw 1 tests/compressed/compressed-ulaw-ch1.aifc"
     },
     "format": "aiff-c",
     "sampleRate": 44100,

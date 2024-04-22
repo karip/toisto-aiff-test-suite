@@ -1,9 +1,9 @@
 {
     "testinfo": {
-        "description": "QDM2 (QDesign Music 2) compressed file, duration 500ms",
+        "description": "QDM2 (QDesign Music 2) compressed file, duration 500ms, 1 channel",
         "software": "Audio Toolbox API",
         "platform": "Mac OS X 10.6",
-        "command": "tools/audiotoolbox-writer 44100 QDM2 1 -d500 tests/compressed/compressed-QDM2.aifc"
+        "command": "tools/audiotoolbox-writer 44100 QDM2 1 -d500 tests/compressed/compressed-qdm2-ch1.aifc"
     },
     "format": "aiff-c",
     "sampleRate": 44100,

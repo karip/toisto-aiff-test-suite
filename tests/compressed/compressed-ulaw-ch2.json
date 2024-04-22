@@ -1,8 +1,9 @@
 {
     "testinfo": {
         "description": "μ-Law 2:1 compressed audio file with 2 channels",
+        "notes": "μ-Law supports any number of channels.",
         "software": "Audio Toolbox API",
-        "platform": "macOS 12.4",
+        "platform": "macOS 14.4",
         "command": "tools/audiotoolbox-writer 44100 ulaw 2 tests/compressed/compressed-ulaw-ch2.aifc"
     },
     "format": "aiff-c",

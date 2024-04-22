@@ -1,6 +1,6 @@
 {
     "testinfo": {
-        "description": "QDMC (QDesign Music) compressed file, duration 1000ms",
+        "description": "QDMC (QDesign Music) compressed file, duration 1000ms, 24kb/s, 1 channel",
         "software": "Windows QuickTime 3 MoviePlayer",
         "platform": "Windows 7"
     },

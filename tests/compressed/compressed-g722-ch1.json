@@ -1,10 +1,10 @@
 {
     "testinfo": {
-        "description": "Python3 written G722 (ADPCM) compressed audio file",
+        "description": "Python3 written G722 (ADPCM) compressed audio file with 1 channel",
         "software": "python3",
-        "version": "3.8.9",
-        "platform": "macOS 12.4",
-        "command": "python3 tools/python3-aiff-writer.py -f AIFC -d G722 -c 1 --bits 16 -r 44100 tests/compressed/compressed-g722.aifc"
+        "version": "3.9.6",
+        "platform": "macOS 14.4",
+        "command": "python3 tools/python3-aiff-writer.py -f AIFC -d G722 -c 1 --bits 16 -r 44100 tests/compressed/compressed-g722-ch1.aifc"
     },
     "format": "aiff-c",
     "sampleRate": 44100,

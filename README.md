@@ -15,11 +15,11 @@ python aifc module. audiotoolbox-aiff-tester requires building it before running
     clang++ ... # see audiotoolbox-aiff-tester.mm for compilation instructions
     cd ..
     python3 toisto-runner.py -v tools/audiotoolbox-aiff-tester
-    # Total 142: 102 passed, 17 failed, 23 invalid, 0 ignored.
+    # Total 149: 104 passed, 22 failed, 23 invalid, 0 ignored.
 
     # NOTE: install tinytag to test id3 tags
     python3 toisto-runner.py -v tools/python3-aiff-tester.py
-    # Total 142: 74 passed, 45 failed, 23 invalid, 0 ignored.
+    # Total 149: 75 passed, 51 failed, 23 invalid, 0 ignored.
 
 [The results for Audio ToolBox framework](result-audiotoolbox-tester.md) running audiotoolbox-aiff-tester.
 

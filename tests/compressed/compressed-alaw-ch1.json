@@ -1,9 +1,9 @@
 {
     "testinfo": {
-        "description": "A-Law 2:1 compressed audio file",
+        "description": "A-Law 2:1 compressed audio file with 1 channel",
         "software": "Audio Toolbox API",
-        "platform": "macOS 12.4",
-        "command": "tools/audiotoolbox-writer 44100 alaw 1 tests/compressed/compressed-alaw.aifc"
+        "platform": "macOS 14.4",
+        "command": "tools/audiotoolbox-writer 44100 alaw 1 tests/compressed/compressed-alaw-ch1.aifc"
     },
     "format": "aiff-c",
     "sampleRate": 44100,

@@ -3,7 +3,7 @@
         "description": "MAC3 (MACE 3:1) compressed audio file with 1 channel",
         "software": "Audio Toolbox API",
         "platform": "Mac OS X 10.6",
-        "command": "tools/audiotoolbox-writer 44100 MAC3 1 tests/compressed/compressed-MAC3.aifc"
+        "command": "tools/audiotoolbox-writer 44100 MAC3 1 tests/compressed/compressed-mac3-ch1.aifc"
     },
     "format": "aiff-c",
     "sampleRate": 44100,

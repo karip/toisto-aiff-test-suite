@@ -1,6 +1,7 @@
 {
     "testinfo": {
         "description": "Audacity exported GSM 6.10 compressed audio file",
+        "notes": "Audacity doesn't export 2 channel GSM 6.10.",
         "software": "Audacity",
         "version": "3.1.3",
         "platform": "macOS 12.4"

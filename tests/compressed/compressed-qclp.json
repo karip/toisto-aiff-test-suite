@@ -1,6 +1,7 @@
 {
     "testinfo": {
         "description": "Qclp (Qualcomm PureVoice) compressed audio file",
+        "notes": "afconvert doesn't export 2 channel Qclp.",
         "software": "Audio Toolbox API",
         "platform": "macOS 12.4",
         "command": "afconvert -d Qclp --no-filler tests/aiff/aiff-samplesize-16.aiff tests/compressed/compressed-qclp.aifc"
