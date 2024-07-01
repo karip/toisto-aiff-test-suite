@@ -230,7 +230,10 @@ FAIL  : tests/exported/quicktime5-ulaw.aifc
 * ERROR: can't open file: tests/invalid/invalid-chunk-comm-short.aifc (fmt?)
  - process returned non-zero exit status: 255
 
+(OK)  : tests/invalid/invalid-chunk-comt-twice.aiff
 (OK)  : tests/invalid/invalid-chunk-id.aiff
+(OK)  : tests/invalid/invalid-chunk-id3-twice.aiff
+(OK)  : tests/invalid/invalid-chunk-mark-twice.aiff
 
 (FAIL): tests/invalid/invalid-compression-type.aifc
 * ERROR: can't open file: tests/invalid/invalid-compression-type.aifc (fmt?)
@@ -273,6 +276,6 @@ FAIL  : tests/exported/quicktime5-ulaw.aifc
 (OK)  : tests/invalid/unspecified-chunk-markers-non-ascii.aiff
 (OK)  : tests/invalid/unspecified-chunk-name-non-ascii.aiff
 
-Total 149: 104 passed, 22 failed, 23 invalid, 0 ignored.
+Total 152: 104 passed, 22 failed, 26 invalid, 0 ignored.
 
 ~~~
