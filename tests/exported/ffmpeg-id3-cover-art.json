@@ -12,10 +12,12 @@
     "channels": 2,
     "codec": "pcm_bei",
     "sampleSize": 16,
-    "id3": {
-        "ATT2": "My Cover Art"
+    "chunks": {
+        "id3": {
+            "ATT2": "My Cover Art"
+        },
+        "name": "My Cover Art"
     },
-    "name": "My Cover Art",
     "samplesPerChannel": 4411,
     "startSamples": [
         [ 10, 10, 10, 10, 10, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0,

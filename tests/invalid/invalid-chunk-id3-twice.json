@@ -9,15 +9,17 @@
     "channels": 2,
     "codec": "pcm_bei",
     "sampleSize": 8,
-    "name": "MySecondTrackTitle",
-    "auth": "MySecondArtistName",
-    "id3": {
-        "TAL": "MySecondAlbumTitle",
-        "TP1": "MySecondArtistName",
-        "COM": "MySecond Comment äö テスト 😀",
-        "TCO": "Instrumental",
-        "ATT2": "MySecondTrackTitle",
-        "TRK": "1"
+    "chunks": {
+        "name": "MySecondTrackTitle",
+        "auth": "MySecondArtistName",
+        "id3": {
+            "TAL": "MySecondAlbumTitle",
+            "TP1": "MySecondArtistName",
+            "COM": "MySecond Comment äö テスト 😀",
+            "TCO": "Instrumental",
+            "ATT2": "MySecondTrackTitle",
+            "TRK": "1"
+        }
     },
     "samplesPerChannel": 4411,
     "startSamples": [

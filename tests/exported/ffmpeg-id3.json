@@ -12,20 +12,22 @@
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 16,
-    "id3": {
-        "TAL": "My äö album",
-        "TP1": "My äö artist",
-        "COM": "My Ã¤Ã¶ comment",
-        "copyright": "2024 äö CC0",
-        "TCO": "Instrumental",
-        "ATT2": "My äö title",
-        "TRK": "1"
+    "chunks": {
+        "id3": {
+            "TAL": "My äö album",
+            "TP1": "My äö artist",
+            "COM": "My Ã¤Ã¶ comment",
+            "copyright": "2024 äö CC0",
+            "TCO": "Instrumental",
+            "ATT2": "My äö title",
+            "TRK": "1"
+        },
+        "name": "My äö title",
+        "auth": "My äö artist",
+        "(c)": "2024 äö CC0",
+        "anno": [ "My Ã¤Ã¶ comment" ],
+        "comments": [ { "timeStamp": 0, "marker": 0, "text": "My Ã¤Ã¶ comment" } ]
     },
-    "name": "My äö title",
-    "auth": "My äö artist",
-    "(c)": "2024 äö CC0",
-    "anno": [ "My Ã¤Ã¶ comment" ],
-    "comments": [ { "timeStamp": 0, "marker": 0, "text": "My Ã¤Ã¶ comment" } ],
     "samplesPerChannel": 4411,
     "startSamples": [
       [ 10, 10, 10, 10, 10, 10, 10, 10, -32768, -32114, -31460, -30806, -30153, -29499, -28845, -28191,

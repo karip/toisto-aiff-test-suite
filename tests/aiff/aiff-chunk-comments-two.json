@@ -8,10 +8,12 @@
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
-    "comments": [
-        { "timeStamp": 0, "marker": 0, "text": "Hello" },
-        { "timeStamp": 3740546029, "marker": 0, "text": "Text" }
-    ],
+    "chunks": {
+        "comments": [
+            { "timeStamp": 0, "marker": 0, "text": "Hello" },
+            { "timeStamp": 3740546029, "marker": 0, "text": "Text" }
+        ]
+    },
     "samplesPerChannel": 4411,
     "startSamples": [
         [ 10, 10, 10, 10, 10, 10, 10, 10, -128, -125, -123, -120, -118, -115, -113, -110,

@@ -10,17 +10,19 @@
     "channels": 2,
     "codec": "pcm_bei",
     "sampleSize": 16,
-    "comments": [
-      { "timeStamp": 0, "marker": 0, "text": " Creator: GarageBand 10.4.6" }
-    ],
-    "markers": [
-        { "id": 1, "position": 0.000000, "name": "Tempo: 120.0" }
-    ],
-    "chan": {
-      "channelLayoutTag": 6619138,
-      "channelBitmap": 3,
-      "channelDescriptions": [
-      ]
+    "chunks": {
+        "comments": [
+            { "timeStamp": 0, "marker": 0, "text": " Creator: GarageBand 10.4.6" }
+        ],
+        "markers": [
+            { "id": 1, "position": 0.000000, "name": "Tempo: 120.0" }
+        ],
+        "chan": {
+            "channelLayoutTag": 6619138,
+            "channelBitmap": 3,
+            "channelDescriptions": [
+            ]
+        }
     },
     "samplesPerChannel": 4410,
     "startSamples": [

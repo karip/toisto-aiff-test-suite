@@ -7,12 +7,14 @@
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
-    "markers": [
-        { "id": 5, "position": 0.000000, "name": "MyMark" }
-    ],
-    "comments": [
-        { "timeStamp": 0, "marker": 5, "text": "Ref" }
-    ],
+    "chunks": {
+        "markers": [
+            { "id": 5, "position": 0.000000, "name": "MyMark" }
+        ],
+        "comments": [
+            { "timeStamp": 0, "marker": 5, "text": "Ref" }
+        ]
+    },
     "samplesPerChannel": 4411,
     "startSamples": [
         [ 10, 10, 10, 10, 10, 10, 10, 10, -128, -125, -123, -120, -118, -115, -113, -110,

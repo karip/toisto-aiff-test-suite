@@ -10,15 +10,17 @@
     "channels": 2,
     "codec": "pcm_bei",
     "sampleSize": 8,
-    "name": "AudacityTrackTitle",
-    "auth": "AudacityArtistName",
-    "id3": {
-        "TAL": "AudacityAlbumTitle",
-        "TP1": "AudacityArtistName",
-        "COM": "Audacity Comment äö テスト 😀",
-        "TCO": "Instrumental",
-        "ATT2": "AudacityTrackTitle",
-        "TRK": "1"
+    "chunks": {
+        "name": "AudacityTrackTitle",
+        "auth": "AudacityArtistName",
+        "id3": {
+            "TAL": "AudacityAlbumTitle",
+            "TP1": "AudacityArtistName",
+            "COM": "Audacity Comment äö テスト 😀",
+            "TCO": "Instrumental",
+            "ATT2": "AudacityTrackTitle",
+            "TRK": "1"
+        }
     },
     "samplesPerChannel": 4411,
     "startSamples": [

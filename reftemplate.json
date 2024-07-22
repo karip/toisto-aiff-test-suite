@@ -13,49 +13,51 @@
     "channels": 2,
     "codec": "pcm_bei|pcm_lei|pcm_beu|pcm_bef|ulaw|alaw|...",
     "sampleSize": 32,
-    "markers": [
-        { "id": 101, "position": 0, "name": "marker-name1" },
-        { "id": 205, "position": 2000, "name": "marker-name2" }
-    ],
-    "comments": [
-        { "timeStamp": 0, "marker": 0, "text": "comment1" },
-        { "timeStamp": 43544343, "marker": 205, "text": "comment2" }
-    ],
-    "inst": {
-        "baseNote": 60,
-        "detune": -3,
-        "lowNote": 40,
-        "highNote": 80,
-        "lowVelocity": 0,
-        "highVelocity": 127,
-        "gain": 6,
-        "sustainLoop": { "playMode": 1, "beginLoop": 101, "endLoop": 205 },
-        "releaseLoop": { "playMode": 0, "beginLoop": 101, "endLoop": 205 }
+    "chunks": {
+        "markers": [
+            { "id": 101, "position": 0, "name": "marker-name1" },
+            { "id": 205, "position": 2000, "name": "marker-name2" }
+        ],
+        "comments": [
+            { "timeStamp": 0, "marker": 0, "text": "comment1" },
+            { "timeStamp": 43544343, "marker": 205, "text": "comment2" }
+        ],
+        "inst": {
+            "baseNote": 60,
+            "detune": -3,
+            "lowNote": 40,
+            "highNote": 80,
+            "lowVelocity": 0,
+            "highVelocity": 127,
+            "gain": 6,
+            "sustainLoop": { "playMode": 1, "beginLoop": 101, "endLoop": 205 },
+            "releaseLoop": { "playMode": 0, "beginLoop": 101, "endLoop": 205 }
+        },
+        "midi": [ [ 240, 127, 127, 4, 1, 127, 63, 247 ] ],
+        "aesd": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+        "appl": [ [ 115, 116, 111, 99, 4, 116, 101, 115, 116, 1, 2 ] ],
+        "name": "sound name",
+        "auth": "author",
+        "(c)": "2022 copyright",
+        "anno": [ "annotation1", "annotation2" ],
+        "id3": {
+            "TAL": "Album Title",
+            "TP1": "Artis tName",
+            "COM": "Comment",
+            "TCO": "Alternative",
+            "ATT2": "Track Title",
+            "TRK": "1"
+        },
+        "chan": {
+            "channelLayoutTag": 6619138,
+            "channelBitmap": 3,
+            "channelDescriptions": [
+                { "label": 0, "flags": 0, "coordinates": [ 0.2, 0,5, -0.5 ] },
+                { "label": 1, "flags": 0, "coordinates": [ 0.2, 0,5, 0.5 ] }
+            ]
+        },
+        "hash": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
     },
-    "midi": [ [ 240, 127, 127, 4, 1, 127, 63, 247 ] ],
-    "aesd": [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
-    "appl": [ [ 115, 116, 111, 99, 4, 116, 101, 115, 116, 1, 2 ] ],
-    "name": "sound name",
-    "auth": "author",
-    "(c)": "2022 copyright",
-    "anno": [ "annotation1", "annotation2" ],
-    "id3": {
-        "TAL": "Album Title",
-        "TP1": "Artis tName",
-        "COM": "Comment",
-        "TCO": "Alternative",
-        "ATT2": "Track Title",
-        "TRK": "1"
-    },
-    "chan": {
-        "channelLayoutTag": 6619138,
-        "channelBitmap": 3,
-        "channelDescriptions": [
-            { "label": 0, "flags": 0, "coordinates": [ 0.2, 0,5, -0.5 ] },
-            { "label": 1, "flags": 0, "coordinates": [ 0.2, 0,5, 0.5 ] }
-        ]
-    },
-    "hash": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
     "samplesPerChannel": 200,
     "tolerance": 1,
     "startSamples": [

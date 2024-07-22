@@ -110,20 +110,20 @@ std::vector<std::vector<double> > readExtAudioData(const char *filename)
         exit(-1);
     }
     if (channelLayout->mChannelLayoutTag != 0) {
-        printf("    \"chan\": {\n");
-        printf("        \"channelLayoutTag\": %d,\n", (uint32_t)channelLayout->mChannelLayoutTag);
-        printf("        \"channelBitmap\": %d,\n", (uint32_t)channelLayout->mChannelBitmap);
-        printf("        \"channelDescriptions\": [\n");
+        printf("        \"chan\": {\n");
+        printf("            \"channelLayoutTag\": %d,\n", (uint32_t)channelLayout->mChannelLayoutTag);
+        printf("            \"channelBitmap\": %d,\n", (uint32_t)channelLayout->mChannelBitmap);
+        printf("            \"channelDescriptions\": [\n");
         for (size_t i = 0; i < channelLayout->mNumberChannelDescriptions; ++i) {
-            printf("            { \"label\": %d, \"flags\": %d, \"coordinates\": [ %f, %f, %f ] }\n",
+            printf("                { \"label\": %d, \"flags\": %d, \"coordinates\": [ %f, %f, %f ] }\n",
                 (uint32_t)channelLayout->mChannelDescriptions[i].mChannelLabel,
                 (uint32_t)channelLayout->mChannelDescriptions[i].mChannelFlags,
                 channelLayout->mChannelDescriptions[i].mCoordinates[0],
                 channelLayout->mChannelDescriptions[i].mCoordinates[1],
                 channelLayout->mChannelDescriptions[i].mCoordinates[2]);
         }
-        printf("        ]\n");
-        printf("    },\n");
+        printf("            ]\n");
+        printf("        },\n");
     }
 
     int channels = audesc.mChannelsPerFrame;
@@ -435,6 +435,8 @@ int main(int argc, const char * argv[]) {
     printf("    \"codec\": \"%s\",\n", codec.c_str());
     printf("    \"sampleSize\": %d,\n", (int)sampleSize);
 
+    printf("    \"chunks\": {\n");
+
     // read markers
     UInt32 msize = getPropertySize(fileID, kAudioFilePropertyMarkerList);
     UInt8* markersBuffer = (UInt8*)malloc(msize);
@@ -446,16 +448,16 @@ int main(int argc, const char * argv[]) {
         exit(-1);
     }
     if (markers->mNumberMarkers > 0) {
-        printf("    \"markers\": [\n");
+        printf("        \"markers\": [\n");
         for (size_t i = 0; i < markers->mNumberMarkers; i++) {
             if (i != 0) {
                 printf(",\n");
             }
             std::string valstr = cfStringToStdString(markers->mMarkers[i].mName);
-            printf("        { \"id\": %d, \"position\": %lf, \"name\": \"%s\" }",
+            printf("            { \"id\": %d, \"position\": %lf, \"name\": \"%s\" }",
                 (int)markers->mMarkers[i].mMarkerID, markers->mMarkers[i].mFramePosition, valstr.c_str());
         }
-        printf("\n    ],\n");
+        printf("\n        ],\n");
     }
 
 #ifdef ENABLE_ID3_PROPERTY // disabled because this doesn't work
@@ -493,7 +495,7 @@ int main(int argc, const char * argv[]) {
     if (CFDictionaryGetCount(piDict) > 1) {
         std::map<std::string, std::string> keyValues;
         CFDictionaryApplyFunction(piDict, storeCFValue, &keyValues);
-        printf("    \"id3\": {\n");
+        printf("        \"id3\": {\n");
         std::map<std::string, std::string> tboxKeyToId3Key;
         tboxKeyToId3Key.insert(std::make_pair("album", "TAL"));
         tboxKeyToId3Key.insert(std::make_pair("artist", "TP1"));
@@ -517,39 +519,41 @@ int main(int argc, const char * argv[]) {
             if (tboxKeyToId3Key.find(key) != tboxKeyToId3Key.end()) {
                 key = tboxKeyToId3Key[key];
             }
-            printf("        \"%s\": \"%s\"", key.c_str(), value.c_str());
+            printf("            \"%s\": \"%s\"", key.c_str(), value.c_str());
         }
-        printf("\n    },\n");
+        printf("\n        },\n");
 
         if (keyValues.find("title") != keyValues.end()) {
-            printf("    \"name\": \"%s\",\n", keyValues["title"].c_str());
+            printf("        \"name\": \"%s\",\n", keyValues["title"].c_str());
         }
         if (keyValues.find("artist") != keyValues.end()) {
-            printf("    \"auth\": \"%s\",\n", keyValues["artist"].c_str());
+            printf("        \"auth\": \"%s\",\n", keyValues["artist"].c_str());
         }
         if (keyValues.find("copyright") != keyValues.end()) {
-            printf("    \"(c)\": \"%s\",\n", keyValues["copyright"].c_str());
+            printf("        \"(c)\": \"%s\",\n", keyValues["copyright"].c_str());
         }
         // TODO: implement reading multiple annotations and comments
         if (keyValues.find("comments") != keyValues.end()) {
-            printf("    \"anno\": [ \"%s\" ],\n", keyValues["comments"].c_str());
+            printf("        \"anno\": [ \"%s\" ],\n", keyValues["comments"].c_str());
         }
         if (keyValues.find("comments") != keyValues.end()) {
-            printf("    \"comments\": [ { \"timeStamp\": 0, \"marker\": 0, \"text\": \"%s\" } ],\n", keyValues["comments"].c_str());
+            printf("        \"comments\": [ { \"timeStamp\": 0, \"marker\": 0, \"text\": \"%s\" } ],\n", keyValues["comments"].c_str());
         }
     }
     AudioFileClose(fileID);
 
-    // TODO: implement writing out values for these if possible
-    printf("    \"inst\": \"-unsupported-\",\n");
-    printf("    \"midi\": \"-unsupported-\",\n");
-    printf("    \"aesd\": \"-unsupported-\",\n");
-    printf("    \"appl\": \"-unsupported-\",\n");
-    printf("    \"hash\": \"-unsupported-\",\n");
-
     // read using Ext API to decode compressed data
 
     std::vector<std::vector<double> > sampleChannelData = readExtAudioData(argv[1]);
+
+    // TODO: implement writing out values for these if possible
+    printf("        \"inst\": \"-unsupported-\",\n");
+    printf("        \"midi\": \"-unsupported-\",\n");
+    printf("        \"aesd\": \"-unsupported-\",\n");
+    printf("        \"appl\": \"-unsupported-\",\n");
+    printf("        \"hash\": \"-unsupported-\"\n");
+
+    printf("    },\n");
 
     printf("    \"samplesPerChannel\": %lu,\n", sampleChannelData[0].size());
 

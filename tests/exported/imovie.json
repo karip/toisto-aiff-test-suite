@@ -10,11 +10,13 @@
     "channels": 2,
     "codec": "pcm_bei",
     "sampleSize": 24,
-    "chan": {
-      "channelLayoutTag": 6619138,
-      "channelBitmap": 0,
-      "channelDescriptions": [
-      ]
+    "chunks": {
+        "chan": {
+            "channelLayoutTag": 6619138,
+            "channelBitmap": 0,
+            "channelDescriptions": [
+            ]
+        }
     },
     "samplesPerChannel": 4805,
     "startSamples": [

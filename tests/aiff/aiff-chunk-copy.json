@@ -7,7 +7,9 @@
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
-    "(c)": "2022 CC0",
+    "chunks": {
+        "(c)": "2022 CC0"
+    },
     "samplesPerChannel": 4411,
     "startSamples": [
         [ 10, 10, 10, 10, 10, 10, 10, 10, -128, -125, -123, -120, -118, -115, -113, -110,

@@ -9,9 +9,11 @@
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
-    "markers": [
-        { "id": 1, "position": 0.000000, "name": "Xemoji🙂-äöx" }
-    ],
+    "chunks": {
+        "markers": [
+            { "id": 1, "position": 0.000000, "name": "Xemoji🙂-äöx" }
+        ]
+    },
     "samplesPerChannel": 4410,
     "startSamples": [
         [ 10, 10, 10, 10, 10, 10, 10, 10, -128, -126, -123, -121, -118, -116, -113, -111,

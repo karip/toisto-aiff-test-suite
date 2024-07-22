@@ -11,14 +11,16 @@
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
-    "id3": {
-        "ATT2": "cd-stereo-6s",
-        "TP1": "Test Artist",
-        "TAL": "Test Album",
-        "TRK": "19/24",
-        "TYE": "2022",
-        "TCO": "Alternative",
-        "COM": "Test ääni comment"
+    "chunks": {
+        "id3": {
+            "ATT2": "cd-stereo-6s",
+            "TP1": "Test Artist",
+            "TAL": "Test Album",
+            "TRK": "19/24",
+            "TYE": "2022",
+            "TCO": "Alternative",
+            "COM": "Test ääni comment"
+        }
     },
     "samplesPerChannel": 264600,
     "startSamples": [

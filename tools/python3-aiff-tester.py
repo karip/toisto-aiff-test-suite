@@ -58,52 +58,56 @@ print(f"    \"channels\": {chcount},")
 print(f"    \"codec\": \"{comptype}\",")
 print(f"    \"sampleSize\": {sampwidth*8},")
 
+print(f"    \"chunks\": {{")
+
 if markers:
-    print(f"    \"markers\": [")
+    print(f"        \"markers\": [")
     m = []
     for marker in markers:
-        m.append(f"        {{ \"id\": {marker[0]}, \"position\": {marker[1]}, \"name\": \"{marker[2].decode('utf-8')}\" }}")
+        m.append(f"            {{ \"id\": {marker[0]}, \"position\": {marker[1]}, \"name\": \"{marker[2].decode('utf-8')}\" }}")
     print(",\n".join(m))
-    print(f"    ],")
+    print(f"        ],")
 
 if 'TinyTag' in vars():
     tag = TinyTag.get(sys.argv[1])
-    print(f"    \"id3\": {{")
+    print(f"        \"id3\": {{")
     tags = []
     if tag.artist:
-        tags.append(f'        "ATT2": "{tag.title}"')
+        tags.append(f'            "ATT2": "{tag.title}"')
     if tag.artist:
-        tags.append(f'        "TP1": "{tag.artist}"')
+        tags.append(f'            "TP1": "{tag.artist}"')
     if tag.album:
-        tags.append(f'        "TAL": "{tag.album}"')
+        tags.append(f'            "TAL": "{tag.album}"')
     if tag.track:
         if tag.track_total:
-            tags.append(f'        "TRK": "{tag.track}/{tag.track_total}"')
+            tags.append(f'            "TRK": "{tag.track}/{tag.track_total}"')
         else:
-            tags.append(f'        "TRK": "{tag.track}"')
+            tags.append(f'            "TRK": "{tag.track}"')
     if tag.year:
-        tags.append(f'        "TYE": "{tag.year}"')
+        tags.append(f'            "TYE": "{tag.year}"')
     if tag.genre:
-        tags.append(f'        "TCO": "{tag.genre}"')
+        tags.append(f'            "TCO": "{tag.genre}"')
     if tag.comment:
-        tags.append(f'        "COM": "{tag.comment}"')
+        tags.append(f'            "COM": "{tag.comment}"')
     print(",\n".join(tags))
-    print(f"    }},")
+    print(f"        }},")
 else:
-    print(f"    \"id3\": \"-unsupported-\",")
+    print(f"        \"id3\": \"-unsupported-\",")
 
 # TODO: implement writing out values for these if possible
-print(f"    \"comments\": \"-unsupported-\",")
-print(f"    \"inst\": \"-unsupported-\",")
-print(f"    \"midi\": \"-unsupported-\",")
-print(f"    \"aesd\": \"-unsupported-\",")
-print(f"    \"appl\": \"-unsupported-\",")
-print(f"    \"name\": \"-unsupported-\",")
-print(f"    \"auth\": \"-unsupported-\",")
-print(f"    \"(c)\": \"-unsupported-\",")
-print(f"    \"anno\": \"-unsupported-\",")
-print(f"    \"chan\": \"-unsupported-\",")
-print(f"    \"hash\": \"-unsupported-\",")
+print(f"        \"comments\": \"-unsupported-\",")
+print(f"        \"inst\": \"-unsupported-\",")
+print(f"        \"midi\": \"-unsupported-\",")
+print(f"        \"aesd\": \"-unsupported-\",")
+print(f"        \"appl\": \"-unsupported-\",")
+print(f"        \"name\": \"-unsupported-\",")
+print(f"        \"auth\": \"-unsupported-\",")
+print(f"        \"(c)\": \"-unsupported-\",")
+print(f"        \"anno\": \"-unsupported-\",")
+print(f"        \"chan\": \"-unsupported-\",")
+print(f"        \"hash\": \"-unsupported-\"")
+
+print(f"    }},")   # end of chunks
 
 samples_per_channel = int(len(frames)/chcount)
 print(f"    \"samplesPerChannel\": {samples_per_channel},")

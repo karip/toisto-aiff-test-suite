@@ -35,7 +35,7 @@ audio files. The folder contains subfolders:
  - `invalid` - contains invalid AIFF and AIFF-C files
 
 The `invalid` folder contains invalid files. The readers may or may not read them,
-but hopefully they won't crash reading them. The unspecified files contain
+but hopefully they won't crash reading them. The "unspecified" files contain
 non-ASCII characters in textual fields, which are not allowed by the spec.
 However, macOS Audio Toolbox framework seems to read them as ISO 8859-1 or UTF-8.
 
@@ -63,28 +63,29 @@ the audio file. The properties in the json file are:
     `pcm_beu`=unsigned big-endian integer, `pcm_bef`=signed big-endian floating point
  - `sampleSize` - for uncompressed encodings, the sample size in bits 0-32 or 64, and
                   for compressed encodings, the decoded sample size (0 for variable sample size)
- - `markers` - a list of markers (the MARK chunk)
-   - `id` - id of the marker
-   - `position` - position of the marker
-   - `name` - name of the marker
- - `comments` - a list of comments (the COMT chunk)
-   - `timeStamp` - time stamp
-   - `marker` - marker id
-   - `text` - comment text
- - `inst` - the instrument chunk data with fields: `baseNote`, `detune`, `lowNote`, `highNote`,
-    `lowVelocity`, `highVelocity`, `gain`, `sustainLoop` (`playMode`, `beginLoop`, `endLoop`),
-    `releaseLoop` (`playMode`, `beginLoop`, `endLoop`)
- - `midi` - a list of a list of bytes in the MIDI chunks (multiple MIDI chunks are allowed)
- - `aesd` - a list of bytes in the AESD chunk
- - `appl` - a list of bytes in the APPL chunk
- - `name` - text of the NAME chunk
- - `auth` - text of the AUTH chunk
- - `(c)` - text of the (c) chunk
- - `anno` - a list of annotations (the ANNO chunks)
- - `id3` - id3 tags (the ID3 chunk)
- - `chan` - channel layout (the CHAN chunk) with fields: `channelLayoutTag`, `channelBitmap`,
-    `channelDescriptions` (`label`, `flags`, `coordinates`)
- - `hash` - an array of 20 bytes containing the SHA-1 hash of the audio data
+ - `chunks` - chunk data:
+   - `markers` - a list of markers (the MARK chunk)
+      - `id` - id of the marker
+      - `position` - position of the marker
+      - `name` - name of the marker
+   - `comments` - a list of comments (the COMT chunk)
+      - `timeStamp` - time stamp
+      - `marker` - marker id
+      - `text` - comment text
+   - `inst` - the instrument chunk data with fields: `baseNote`, `detune`, `lowNote`, `highNote`,
+      `lowVelocity`, `highVelocity`, `gain`, `sustainLoop` (`playMode`, `beginLoop`, `endLoop`),
+      `releaseLoop` (`playMode`, `beginLoop`, `endLoop`)
+   - `midi` - a list of a list of bytes in the MIDI chunks (multiple MIDI chunks are allowed)
+   - `aesd` - a list of bytes in the AESD chunk
+   - `appl` - a list of bytes in the APPL chunk
+   - `name` - text of the NAME chunk
+   - `auth` - text of the AUTH chunk
+   - `(c)` - text of the (c) chunk
+   - `anno` - a list of annotations (the ANNO chunks)
+   - `id3` - id3 tags (the ID3 chunk)
+   - `chan` - channel layout (the CHAN chunk) with fields: `channelLayoutTag`, `channelBitmap`,
+      `channelDescriptions` (`label`, `flags`, `coordinates`)
+   - `hash` - an array of 20 bytes containing the SHA-1 hash of the audio data
  - `samplesPerChannel` - the number of samples per channel after samples have been decoded
     (this may differ from the COMM chunk numSampleFrames value)
  - `tolerance` - how much sample values may differ from the expected values, default is 0

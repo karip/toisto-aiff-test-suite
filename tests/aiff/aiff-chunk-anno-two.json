@@ -7,7 +7,9 @@
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
-    "anno": [ "FirstAnno", "SecondAnno" ],
+    "chunks": {
+        "anno": [ "FirstAnno", "SecondAnno" ]
+    },
     "samplesPerChannel": 4411,
     "startSamples": [
         [ 10, 10, 10, 10, 10, 10, 10, 10, -128, -125, -123, -120, -118, -115, -113, -110,

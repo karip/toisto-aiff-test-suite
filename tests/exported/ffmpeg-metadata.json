@@ -12,10 +12,12 @@
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 16,
-    "name": "My Ã¤Ã¶ title",
-    "(c)": "2024 Ã¤Ã¶ CC0",
-    "anno": [ "My Ã¤Ã¶ comment" ],
-    "comments": [ { "timeStamp": 0, "marker": 0, "text": "My Ã¤Ã¶ comment" } ],
+    "chunks": {
+        "name": "My Ã¤Ã¶ title",
+        "(c)": "2024 Ã¤Ã¶ CC0",
+        "anno": [ "My Ã¤Ã¶ comment" ],
+        "comments": [ { "timeStamp": 0, "marker": 0, "text": "My Ã¤Ã¶ comment" } ]
+    },
     "samplesPerChannel": 4411,
     "startSamples": [
       [ 10, 10, 10, 10, 10, 10, 10, 10, -32768, -32114, -31460, -30806, -30153, -29499, -28845, -28191,

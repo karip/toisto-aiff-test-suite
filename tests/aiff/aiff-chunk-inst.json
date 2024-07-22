@@ -7,20 +7,22 @@
     "channels": 1,
     "codec": "pcm_bei",
     "sampleSize": 8,
-    "markers": [
-        { "id": 101, "position": 10.000000, "name": "Start" },
-        { "id": 205, "position": 130.000000, "name": "End" }
-    ],
-    "inst": {
-        "baseNote": 60,
-        "detune": -5,
-        "lowNote": 30,
-        "highNote": 90,
-        "lowVelocity": 20,
-        "highVelocity": 60,
-        "gain": 0,
-        "sustainLoop": { "playMode": 1, "beginLoop": 101, "endLoop": 205 },
-        "releaseLoop": { "playMode": 2, "beginLoop": 101, "endLoop": 205 }
+    "chunks": {
+        "markers": [
+            { "id": 101, "position": 10.000000, "name": "Start" },
+            { "id": 205, "position": 130.000000, "name": "End" }
+        ],
+        "inst": {
+            "baseNote": 60,
+            "detune": -5,
+            "lowNote": 30,
+            "highNote": 90,
+            "lowVelocity": 20,
+            "highVelocity": 60,
+            "gain": 0,
+            "sustainLoop": { "playMode": 1, "beginLoop": 101, "endLoop": 205 },
+            "releaseLoop": { "playMode": 2, "beginLoop": 101, "endLoop": 205 }
+        }
     },
     "samplesPerChannel": 4411,
     "startSamples": [

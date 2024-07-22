@@ -9,10 +9,12 @@
     "channels": 2,
     "codec": "pcm_bei",
     "sampleSize": 32,
-    "markers": [
-        { "id": 104, "position": 0.000000, "name": "mark1" },
-        { "id": 102, "position": 1050.000000, "name": "markb1" }
-    ],
+    "chunks": {
+        "markers": [
+            { "id": 104, "position": 0.000000, "name": "mark1" },
+            { "id": 102, "position": 1050.000000, "name": "markb1" }
+        ]
+    },
     "samplesPerChannel": 4410,
     "startSamples": [
         [ 10, 10, 10, 10, 10, 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0,
