@@ -9,7 +9,7 @@
     "format": "aiff-c",
     "sampleRate": 44100,
     "channels": 1,
-    "codec": "ALAW",
+    "codec": "alaw",
     "sampleSize": 16,
     "samplesPerChannel": 4410,
     "startSamples": [

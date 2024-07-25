@@ -21,6 +21,10 @@ samplerate = afile.getframerate()
 comptype = afile.getcomptype().decode('utf-8')
 if comptype == "NONE":
     comptype = "pcm_bei"
+if comptype == "ALAW":
+    comptype = "alaw"
+if comptype == "ULAW":
+    comptype = "ulaw"
 compname = afile.getcompname()
 markers = afile.getmarkers()
 strframes = afile.readframes(1000000)
@@ -32,7 +36,7 @@ for i in range(0, round(len(strframes)/sampwidth)):
             s -= 256
         frames.append(s)
     elif sampwidth == 2:
-        if comptype == "alaw" or comptype == "ulaw" or comptype == "ALAW" or comptype == "ULAW"  or comptype == "G722":
+        if comptype == "alaw" or comptype == "ulaw" or comptype == "G722":
             s = strframes[i*2+1] * 256 + strframes[i*2]
         else:
             s = strframes[i*2] * 256 + strframes[i*2+1]
