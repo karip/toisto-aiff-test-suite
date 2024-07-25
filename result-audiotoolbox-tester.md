@@ -241,6 +241,7 @@ FAIL  : tests/exported/quicktime5-ulaw.aifc
 
 (OK)  : tests/invalid/invalid-double-comm-ssnd.aiff
 (OK)  : tests/invalid/invalid-extra-garbage-at-end.aiff
+(OK)  : tests/invalid/invalid-extra-ssnd-after-form-end.aiff
 (OK)  : tests/invalid/invalid-file-too-short.aiff
 (OK)  : tests/invalid/invalid-fver-bad-value.aifc
 (OK)  : tests/invalid/invalid-no-fver.aifc
@@ -276,6 +277,6 @@ FAIL  : tests/exported/quicktime5-ulaw.aifc
 (OK)  : tests/invalid/unspecified-chunk-markers-non-ascii.aiff
 (OK)  : tests/invalid/unspecified-chunk-name-non-ascii.aiff
 
-Total 152: 104 passed, 22 failed, 26 invalid, 0 ignored.
+Total 153: 104 passed, 22 failed, 27 invalid, 0 ignored.
 
 ~~~
