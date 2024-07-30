@@ -3,7 +3,7 @@
         "description": "Non-ascii chars in (c) are undefined in the AIFF spec",
         "notes": "Audio Toolbox API seems to decode non-ascii (c) chars as ISO 8859-1. Audacity shows dots for them."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,

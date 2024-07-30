@@ -3,7 +3,7 @@
         "description": "AIFF file with the SSND chunk size set to a value (0xffff) larger than the file size",
         "notes": "QuickTime Player 10.5 plays this file using the SSND size as the sample count."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,

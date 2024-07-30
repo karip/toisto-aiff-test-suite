@@ -3,5 +3,5 @@
         "description": "AIFC file without the COMM chunk",
         "notes": "QuickTime Player 10.5 cannot play this file."
     },
-    "result": "invalid"
+    "result": "ignore"
 }

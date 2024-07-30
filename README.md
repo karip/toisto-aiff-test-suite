@@ -15,11 +15,11 @@ python aifc module. audiotoolbox-aiff-tester requires building it before running
     clang++ ... # see audiotoolbox-aiff-tester.mm for compilation instructions
     cd ..
     python3 toisto-runner.py -v tools/audiotoolbox-aiff-tester
-    # Total 153: 104 passed, 22 failed, 27 invalid, 0 ignored.
+    # Total 153: 104 passed, 22 failed, 27 ignored.
 
     # NOTE: install tinytag to test id3 tags
     python3 toisto-runner.py -v tools/python3-aiff-tester.py
-    # Total 153: 75 passed, 51 failed, 27 invalid, 0 ignored.
+    # Total 153: 75 passed, 51 failed, 27 ignored.
 
 [The results for Audio ToolBox framework](result-audiotoolbox-tester.md) running audiotoolbox-aiff-tester.
 
@@ -38,6 +38,7 @@ The `invalid` folder contains invalid files. The readers may or may not read the
 but hopefully they won't crash reading them. The "unspecified" files contain
 non-ASCII characters in textual fields, which are not allowed by the spec.
 However, macOS Audio Toolbox framework seems to read them as ISO 8859-1 or UTF-8.
+All files in the `invalid` folder have been marked to be ignored in the results.
 
 ## Expected results (json files)
 
@@ -53,8 +54,7 @@ the audio file. The properties in the json file are:
    - `platform` - platform used to run the software ("macOS 12.4" / "Windows 7" ..)
    - `command` - command line tool and its arguments used to create the file
 
- - `result` - the test is a normal test if this is missing, `ignore` to ignore the test,
-              `invalid` if the test file is an invalid file
+ - `result` - the test is a normal test if this field is missing, `ignore` to ignore the test
  - `format` - format of the file: `aiff` or `aifc`
  - `sampleRate` - sample rate
  - `channels` - number of channels

@@ -3,7 +3,7 @@
         "description": "Sample rate NaN",
         "notes": "QuickTime Player 10.5 cannot play this file."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": "nan",
     "channels": 1,

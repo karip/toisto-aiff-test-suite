@@ -3,7 +3,7 @@
         "description": "The FVER chunk with an invalid version timestamp",
         "notes": "QuickTime Player 10.5 can play this file."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff-c",
     "sampleRate": 44100,
     "channels": 1,

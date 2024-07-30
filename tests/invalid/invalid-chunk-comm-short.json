@@ -3,7 +3,7 @@
         "description": "The COMM chunk too short without the compression type",
         "notes": "QuickTime Player 10.5 cannot play this file."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff-c",
     "sampleRate": 44100,
     "channels": 1,

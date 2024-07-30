@@ -3,7 +3,7 @@
         "description": "Non-ascii chars in markers are undefined in the AIFF spec",
         "notes": "Audio Toolbox kAudioFilePropertyMarkerList API seems to decode non-ascii chars as UTF-8."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,

@@ -3,7 +3,7 @@
         "description": "The Comments (COMT) chunk twice",
         "notes": "Audio Toolbox API reads the first COMT chunk."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,

@@ -3,7 +3,7 @@
         "description": "The ID3 chunk is twice in the file",
         "notes": "Audio Toolbox API reads the second ID3 chunk."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 2,

@@ -3,7 +3,7 @@
         "description": "Invalid chunk ID containing non-ascii characters",
         "notes": "QuickTime Player 10.5 can play this file."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,

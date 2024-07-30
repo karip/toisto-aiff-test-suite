@@ -3,7 +3,7 @@
         "description": "Sample rate infinity",
         "notes": "QuickTime Player 10.5 cannot play this file."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": "inf",
     "channels": 1,

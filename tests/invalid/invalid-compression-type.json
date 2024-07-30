@@ -3,7 +3,7 @@
         "description": "Invalid compression type with non-ascii characters",
         "notes": "QuickTime Player 10.5 cannot play this file."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff-c",
     "sampleRate": 44100,
     "channels": 1,

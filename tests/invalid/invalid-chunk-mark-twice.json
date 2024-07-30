@@ -3,7 +3,7 @@
       "description": "The Markers (MARK) chunk twice",
       "notes": "Audio Toolbox API reads the first MARK chunk."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 2,

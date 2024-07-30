@@ -3,7 +3,7 @@
         "description": "AIFF file with two COMM chunks and two SSND chunks",
         "notes": "QuickTime Player 10.5 plays the last COMM chunk and the last SSND chunk."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,

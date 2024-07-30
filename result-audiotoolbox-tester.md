@@ -277,6 +277,6 @@ FAIL  : tests/exported/quicktime5-ulaw.aifc
 (OK)  : tests/invalid/unspecified-chunk-markers-non-ascii.aiff
 (OK)  : tests/invalid/unspecified-chunk-name-non-ascii.aiff
 
-Total 153: 104 passed, 22 failed, 27 invalid, 0 ignored.
+Total 153: 104 passed, 22 failed, 27 ignored.
 
 ~~~

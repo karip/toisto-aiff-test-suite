@@ -3,7 +3,7 @@
         "description": "Sample size zero bits",
         "notes": "QuickTime Player 10.5 cannot play this file."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,

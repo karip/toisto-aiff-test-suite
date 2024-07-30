@@ -1,9 +1,9 @@
 {
     "testinfo": {
         "description": "Extra MARK and SSND chunks after the end of the FORM chunk",
-        "notes": "Audio Toolbox API doesn't read the MARK or SSND chunks because they are after the FORM end. This file has been marked as 'invalid' because the spec doesn't say that extra data after the FORM end is allowed."
+        "notes": "Audio Toolbox API doesn't read the MARK or SSND chunks because they are after the FORM end. This file considered to be invalid because the spec doesn't say that extra data after the FORM end is allowed."
     },
-    "result": "invalid",
+    "result": "ignore",
     "format": "aiff",
     "sampleRate": 44100,
     "channels": 1,
