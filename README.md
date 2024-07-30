@@ -8,7 +8,7 @@ This is an unofficial AIFF / AIFF-C audio file test suite.
 The `toisto-runner.py` script runs the test suite for the command given to it.
 
 Here's examples running the test suite for macOS Audio ToolBox framework or
-python aifc module. audiotoolbox-aiff-tester requires building it before running it.
+python aifc module. `audiotoolbox-aiff-tester` requires building it before running it.
 
     # for macOS
     cd tools
@@ -21,7 +21,8 @@ python aifc module. audiotoolbox-aiff-tester requires building it before running
     python3 toisto-runner.py -v tools/python3-aiff-tester.py
     # Total 153: 75 passed, 51 failed, 27 ignored.
 
-[The results for Audio ToolBox framework](result-audiotoolbox-tester.md) running audiotoolbox-aiff-tester.
+[The results for Audio ToolBox framework](result-audiotoolbox-tester.md) running
+`audiotoolbox-aiff-tester`.
 
 ## Test cases
 
@@ -54,7 +55,7 @@ the audio file. The properties in the json file are:
    - `platform` - platform used to run the software ("macOS 12.4" / "Windows 7" ..)
    - `command` - command line tool and its arguments used to create the file
 
- - `result` - the test is a normal test if this field is missing, `ignore` to ignore the test
+ - `result` - `ignore` to ignore the test in the results
  - `format` - format of the file: `aiff` or `aifc`
  - `sampleRate` - sample rate
  - `channels` - number of channels
@@ -94,9 +95,9 @@ the audio file. The properties in the json file are:
 
 See [reftemplate.json](reftemplate.json) for examples for all the fields.
 
-toisto-runner.py will compare each of these fields (except testinfo) against
+`toisto-runner.py` compares each of these fields (except `testinfo`) against
 the values returned by the command. If the fields match, the test passes.
-If the command returns "-unsupported-", it means that the field is not
+If the command returns `"-unsupported-"`, it means that the field is not
 supported by the command and it won't affect the result of the test.
 
 ## Reference sample data
